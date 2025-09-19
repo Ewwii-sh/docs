@@ -73,6 +73,11 @@ const config: Config = {
       },
       items: [
         {
+          type: "docsVersionDropdown",
+          position: "left",
+          dropdownActiveClassDisabled: true,
+        },
+        {
           href: "https://ewwii-sh.github.io",
           label: "Home",
           position: "right",
