@@ -28,7 +28,7 @@ jobs:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
-            target
+            target-*
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-cargo-
@@ -43,18 +43,31 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Clone Ewwii repo
-        run: git clone --depth 1 https://github.com/Ewwii-sh/ewwii.git ewwii
+        run: git clone https://github.com/Ewwii-sh/ewwii.git ewwii
 
-      - name: Generate Rhai docs
+      - name: Generate Rhai docs for next
         run: |
           mkdir -p ./tools/generate-rhai-docs/auto_gen/
           cargo run --release -p generate-rhai-docs
+
+          mkdir -p ./docs/modules/
+          cp -r ./tools/generate-rhai-docs/auto_gen/* ../docs/modules/
         working-directory: ./ewwii
 
-      - name: Copy generated docs
+      - name: Generate Rhai docs for all frozen versions
         run: |
-          mkdir -p ./docs/modules/
-          cp -r ./ewwii/tools/generate-rhai-docs/auto_gen/* ./docs/modules/
+          cd ewwii
+          versions=$(jq -r '.[]' versions.json)
+          git -C ewwii fetch --tags --force
+          for v in $versions; do
+            echo "Processing version $v"
+            mkdir -p ../versioned_docs/version-$v/modules/
+            git -C ewwii checkout "v${v}"
+
+            cargo run --release -p generate-rhai-docs
+
+            cp -r ./tools/generate-rhai-docs/auto_gen/* ../versioned_docs/version-$v/modules/
+          done
 
       - name: Build site
         run: pnpm run build
