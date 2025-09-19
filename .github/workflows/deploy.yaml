@@ -58,11 +58,11 @@ jobs:
         run: |
           cd ewwii
           versions=$(jq -r '.[]' ../versions.json)
-          git -C ewwii fetch --tags --force
+          git fetch --tags --force
           for v in $versions; do
             echo "Processing version $v"
             mkdir -p ../versioned_docs/version-$v/modules/
-            git -C ewwii checkout "v${v}"
+            git checkout "v${v}"
 
             cargo run --release -p generate-rhai-docs
 
