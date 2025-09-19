@@ -1,6 +1,6 @@
 # Writing your ewwii configuration
 
-(For a list of all built-in widgets (i.e. `box`, `label`, `button`), see [Widget Documentation](../widgets/widgets.md).)
+(For a list of all built-in widgets (i.e. `box`, `label`, `button`), see [Widget Documentation](/docs/widgets/widgets.md).)
 
 Ewwii is configured using a language called `Rhai`.
 Using rhai, you declare the structure and content of your widgets, the geometry, position, and behavior of any windows,
@@ -148,4 +148,4 @@ In that button's `onclick` property, we refer to the provided `name` using strin
 
 To then use our widget, we call the function that provides the widget with the necessary parameters passed.
 
-As you may have noticed, we are using a couple predefined widgets here. These are all listed and explained in the [widgets chapter](widgets.md).
+As you may have noticed, we are using a couple predefined widgets here. These are all listed and explained in the [widgets chapter](/docs/widgets/widgets.md).
