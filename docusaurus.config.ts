@@ -73,6 +73,11 @@ const config: Config = {
       },
       items: [
         {
+          href: "https://ewwii-sh.github.io",
+          label: "Home",
+          position: "right",
+        },
+        {
           href: "https://github.com/Ewwii-sh",
           label: "GitHub",
           position: "right",
@@ -96,7 +101,7 @@ const config: Config = {
           items: [
             {
               label: "Home",
-              href: "/",
+              href: "https://ewwii-sh.github.io",
             },
             {
               label: "GitHub",
