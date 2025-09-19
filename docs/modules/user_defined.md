@@ -6,8 +6,8 @@ User-defined modules allow you to **organize your code** by splitting it into se
 
 In Rhai modules:
 
--   **Functions are automatically exported** by default. You do **not** need to use `export` for functions.
--   **Variables, constants, and objects must be exported manually** using the `export` keyword.
+- **Functions are automatically exported** by default. You do **not** need to use `export` for functions.
+- **Variables, constants, and objects must be exported manually** using the `export` keyword.
 
 ```js
 // File: ./foo/baz.rhai
@@ -50,6 +50,6 @@ print(example::PI); // 3.14159
 
 ## Notes
 
--   Functions are automatically exported unless explicitly marked `private`.
--   Variables, constants, and objects must be exported using the `export` keyword.
--   `as` keyword is important in an `import` statement if you want to import the variables and functions in a Rhai file.
+- Functions are automatically exported unless explicitly marked `private`.
+- Variables, constants, and objects must be exported using the `export` keyword.
+- `as` keyword is important in an `import` statement if you want to import the variables and functions in a Rhai file.

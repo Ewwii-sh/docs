@@ -18,7 +18,7 @@ You can call it like this:
 
 ```js
 labeled_container("foo", [
-    button(#{ onclick: "notify-send hey ho", label: "Click me" }),
+  button(#{ onclick: "notify-send hey ho", label: "Click me" }),
 ]);
 ```
 

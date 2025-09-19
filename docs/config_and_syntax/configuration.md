@@ -26,9 +26,12 @@ Firstly, you will need to create a top-level window. Here, you configure things 
 
 Let's look at an example window definition:
 
-```js,ignore
-enter([ // Add all defwindow inside enter. Enter is the root of the config.
-  defwindow("example", #{
+```js ,ignore
+enter([
+  // Add all defwindow inside enter. Enter is the root of the config.
+  defwindow(
+    "example",
+    #{
       monitor: 0,
       windowtype: "dock",
       stacking: "fg",
@@ -38,12 +41,14 @@ enter([ // Add all defwindow inside enter. Enter is the root of the config.
         y: "2px",
         width: "90%",
         height: "30px",
-        anchor: "top center"
+        anchor: "top center",
       },
       exclusive: true,
-      reserve: #{ distance: "40px", side: "top" }
-  }, label(#{ text: "example content" }))
-])
+      reserve: #{ distance: "40px", side: "top" },
+    },
+    label(#{ text: "example content" })
+  ),
+]);
 ```
 
 Here, we are defining a window named `example`, which we then define a set of properties for. Additionally, we set the content of the window to be the text `"example content"`.
@@ -61,10 +66,10 @@ You can now open your first window by running `ewwii open example`! Glorious!
 
 This field can be:
 
--   the string `<primary>`, in which case ewwii tries to identify the primary display (which may fail, especially on wayland)
--   an integer, declaring the monitor index
--   the name of the monitor
--   a string containing a JSON-array of monitor matchers, such as: `'["<primary>", "HDMI-A-1", "PHL 345B1C", 0]'`. Ewwii will try to find a match in order, allowing you to specify fallbacks.
+- the string `<primary>`, in which case ewwii tries to identify the primary display (which may fail, especially on wayland)
+- an integer, declaring the monitor index
+- the name of the monitor
+- a string containing a JSON-array of monitor matchers, such as: `'["<primary>", "HDMI-A-1", "PHL 345B1C", 0]'`. Ewwii will try to find a match in order, allowing you to specify fallbacks.
 
 **`geometry`-properties**
 
@@ -115,13 +120,13 @@ To show this, let's replace the text in our window definition with a call to thi
 
 ```js
 enter([
-    defwindow(
-        "example",
-        #{
-            // ... properties omitted
-        },
-        greeter("Bob")
-    ),
+  defwindow(
+    "example",
+    #{
+      // ... properties omitted
+    },
+    greeter("Bob")
+  ),
 ]);
 ```
 

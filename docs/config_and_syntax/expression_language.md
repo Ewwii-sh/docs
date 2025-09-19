@@ -4,11 +4,11 @@ Ewwii uses [Rhai](https://rhai.rs/) as its core expression and scripting engine.
 
 Rhai expressions can:
 
--   Perform logic and branching (`if`, `match`, `? :`)
--   Handle mathematical calculations and string operations
--   Access nested data from arrays, maps, or JSON
--   Run custom functions
--   Be used directly in layout definitions, widget attributes, and style rules
+- Perform logic and branching (`if`, `match`, `? :`)
+- Handle mathematical calculations and string operations
+- Access nested data from arrays, maps, or JSON
+- Run custom functions
+- Be used directly in layout definitions, widget attributes, and style rules
 
 Unlike Yuck, where expressions were embedded in `{ ... }` or `${ ... }`, Rhai treats expressions as **native**. They don’t need to be wrapped in special delimiters. If you can write it in Rhai, it just works.
 
@@ -33,15 +33,15 @@ box(#{
 
 Rhai supports a wide range of expression capabilities:
 
--   **Mathematics**: `+`, `-`, `*`, `/`, `%`
--   **Comparisons**: `==`, `!=`, `<`, `>`, `<=`, `>=`
--   **Boolean logic**: `&&`, `||`, `!`
--   **Conditionals**: `if/else`, ternary (`cond ? a : b`)
--   **Regex matching**: `=~` operator (Rust-style regex)
--   **Optional access**: `?.` and `?.[index]`
--   **Data structures**: maps/arrays (`obj.field`, `arr[3]`, `map["key"]`)
--   **Function calls**: standard and Ewwii-specific built-ins (see below)
--   **String interpolation**: `` `Value is ${value}` `` (standard Rhai feature)
+- **Mathematics**: `+`, `-`, `*`, `/`, `%`
+- **Comparisons**: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- **Boolean logic**: `&&`, `||`, `!`
+- **Conditionals**: `if/else`, ternary (`cond ? a : b`)
+- **Regex matching**: `=~` operator (Rust-style regex)
+- **Optional access**: `?.` and `?.[index]`
+- **Data structures**: maps/arrays (`obj.field`, `arr[3]`, `map["key"]`)
+- **Function calls**: standard and Ewwii-specific built-ins (see below)
+- **String interpolation**: `` `Value is ${value}` `` (standard Rhai feature)
 
 > Note
 >
@@ -57,14 +57,14 @@ Rhai supports a wide range of expression capabilities:
 
 Examples include:
 
--   `round()`, `floor()`, `ceil()`, `powi()`, `powf()`
--   `min()`, `max()`, `sin()`, `cos()`, etc.
--   `replace()`, `matches()`, `captures()`
--   `strlength()`, `arraylength()`, `objectlength()`
--   `jq()` – run jaq-compatible filters on JSON data
--   `get_env()` – read environment variables
--   `formattime()` – format UNIX timestamps
--   `formatbytes()` – format file sizes (IEC or SI)
+- `round()`, `floor()`, `ceil()`, `powi()`, `powf()`
+- `min()`, `max()`, `sin()`, `cos()`, etc.
+- `replace()`, `matches()`, `captures()`
+- `strlength()`, `arraylength()`, `objectlength()`
+- `jq()` – run jaq-compatible filters on JSON data
+- `get_env()` – read environment variables
+- `formattime()` – format UNIX timestamps
+- `formatbytes()` – format file sizes (IEC or SI)
 
 ## Dynamic Usage
 

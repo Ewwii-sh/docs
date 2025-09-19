@@ -23,7 +23,7 @@ Here you will find help if something doesn't work. If the issue isn't listed her
 
 ## Something isn't styled correctly!
 
-Check the [GTK-Debugger](working_with_gtk.md#gtk-debugger) to get more insight into what styles GTK is applying to which elements.
+Check the [GTK-Debugger](/docs/theming_and_ui/working_with_gtk.md#gtk-debugger) to get more insight into what styles GTK is applying to which elements.
 
 ## General issues
 

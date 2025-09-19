@@ -6,37 +6,37 @@ Below is a list of available widgets and the parameters each accepts.
 
 These functions correspond to actual GTK widgets and render visible UI elements.
 
--   **box**: `props`, `children`
--   **centerbox**: `props`, `children`
--   **eventbox**: `props`, `children`
--   **tooltip**: `props`, `children`
--   **circular_progress**: `props`
--   **graph**: `props`
--   **transform**: `props`
--   **slider**: `props`
--   **progress**: `props`
--   **image**: `props`
--   **button**: `props`
--   **label**: `props`
--   **input**: `props`
--   **calendar**: `props`
--   **color_button**: `props`
--   **expander**: `props`, `children`
--   **color_chooser**: `props`
--   **combo_box_text**: `props`
--   **checkbox**: `props`
--   **revealer**: `props`, `children`
--   **scroll**: `props`, `children`
--   **overlay**: `props`, `children`
--   **stack**: `props`, `children`
+- **box**: `props`, `children`
+- **centerbox**: `props`, `children`
+- **eventbox**: `props`, `children`
+- **tooltip**: `props`, `children`
+- **circular_progress**: `props`
+- **graph**: `props`
+- **transform**: `props`
+- **slider**: `props`
+- **progress**: `props`
+- **image**: `props`
+- **button**: `props`
+- **label**: `props`
+- **input**: `props`
+- **calendar**: `props`
+- **color_button**: `props`
+- **expander**: `props`, `children`
+- **color_chooser**: `props`
+- **combo_box_text**: `props`
+- **checkbox**: `props`
+- **revealer**: `props`, `children`
+- **scroll**: `props`, `children`
+- **overlay**: `props`, `children`
+- **stack**: `props`, `children`
 
 ## Utility Functions
 
 These are not visible UI widgets but are essential for layout, data binding, or dynamic behavior.
 
--   **defwindow**: `string`, `props`, `children`
--   **poll**: `props`
--   **listen**: `props`
+- **defwindow**: `string`, `props`, `children`
+- **poll**: `props`
+- **listen**: `props`
 
 > **Let's recall**
 >
@@ -46,4 +46,4 @@ These are not visible UI widgets but are essential for layout, data binding, or 
 >
 > `children` param: Defined in `[]`
 >
-> > Both of these are discussed in [chapter 2.2](../config/config_fundamentals.md)
+> > Both of these are discussed in [chapter 2.2](/docs/config_and_syntax/config_fundamentals.md)
