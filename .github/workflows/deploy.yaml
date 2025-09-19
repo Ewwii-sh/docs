@@ -7,11 +7,16 @@ on:
 
 permissions:
   contents: write
+  packages: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: ghcr.io/ewwii-sh/docs/docusaurus-builder:latest
+    container:
+      image: ghcr.io/ewwii-sh/docs/docusaurus-builder:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout repo
