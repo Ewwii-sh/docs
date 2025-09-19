@@ -11,7 +11,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: ghcr.io/${{ github.repository }}/docusaurus-builder:latest
+    container: ghcr.io/ewwii-sh/docs/docusaurus-builder:latest
 
     steps:
       - name: Checkout repo
