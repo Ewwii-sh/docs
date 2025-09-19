@@ -11,31 +11,11 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    container: ghcr.io/${{ github.repository }}/docusaurus-builder:latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Cache system dependencies
-        uses: actions/cache@v3
-        with:
-          path: /tmp/apt-cache
-          key: ${{ runner.os }}-debs-v1
-
-      - name: Install APT dependencies
-        run: |
-          mkdir -p /tmp/apt-cache
-          sudo apt-get update
-          sudo apt-get -o dir::cache::archives="/tmp/apt-cache" install -y \
-            pkg-config libcairo2-dev libglib2.0-dev libgirepository1.0-dev \
-            libpango1.0-dev libatk1.0-dev libgtk-3-dev
-
-      - name: Setup Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
 
       - name: Cache Rust deps
         uses: actions/cache@v4
@@ -48,14 +28,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cargo-
 
-      - name: Setup Node.js
+      - name: Cache Node deps
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: pnpm
-
-      - name: Install pnpm
-        run: npm install -g pnpm
 
       - name: Install Node dependencies
         run: pnpm install --frozen-lockfile
