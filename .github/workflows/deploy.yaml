@@ -46,13 +46,15 @@ jobs:
         run: git clone --depth 1 https://github.com/Ewwii-sh/ewwii.git ewwii
 
       - name: Generate Rhai docs
-        run: cargo run --release -p generate-rhai-docs
+        run: |
+          mkdir -p ./tools/generate-rhai-docs/auto_gen/
+          cargo run --release -p generate-rhai-docs
         working-directory: ./ewwii
 
       - name: Copy generated docs
         run: |
-          mkdir -p ./docs/modules
-          cp -r ./ewwii/tools/generate-rhai-docs/* ./docs/modules/
+          mkdir -p ./docs/modules/
+          cp -r ./ewwii/tools/generate-rhai-docs/auto_gen/* ./docs/modules/
 
       - name: Build site
         run: pnpm run build
