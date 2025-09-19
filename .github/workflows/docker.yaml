@@ -8,6 +8,10 @@ on:
       - .github/docker/**
       - .github/workflows/docker.yaml
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
