@@ -57,7 +57,7 @@ jobs:
       - name: Generate Rhai docs for all frozen versions
         run: |
           cd ewwii
-          versions=$(jq -r '.[]' versions.json)
+          versions=$(jq -r '.[]' ../versions.json)
           git -C ewwii fetch --tags --force
           for v in $versions; do
             echo "Processing version $v"
