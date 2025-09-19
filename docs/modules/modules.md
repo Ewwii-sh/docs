@@ -8,7 +8,7 @@ Modules undoubtedly are one of the most powerful features in Rhai. They provide 
 
 Every module follows the syntax:
 
-```js
+```javascript
 import "std::env" as env;
 let home = env::get_home_dir(); // returns `$HOME` env var value
 ```

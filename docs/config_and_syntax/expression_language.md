@@ -14,7 +14,7 @@ Unlike Yuck, where expressions were embedded in `{ ... }` or `${ ... }`, Rhai tr
 
 ## Example
 
-```js
+```javascript
 let value = 12 + foo * 10;
 
 box(#{
@@ -70,7 +70,7 @@ Examples include:
 
 Because expressions are just Rhai, you can now write real logic inline or break it into reusable functions:
 
-```js
+```javascript
 fn status_text(active) {
   return active ? "enabled" : "disabled";
 }

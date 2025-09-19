@@ -12,7 +12,7 @@ In Rhai, all variables are dynamically typed bindings to values. You can define 
 
 **Basic variables (`let`)**
 
-```js
+```javascript
 let foo = "value";
 ```
 
@@ -25,7 +25,7 @@ Just having static variables that wont update is pretty limiting. So, ewwii has 
 
 **Polling variables (`poll`)**
 
-```js
+```javascript
 enter([
   poll("var_name", #{
       // It is recommended to have initial property passed.
@@ -52,7 +52,7 @@ To externally update a polling variable, `ewwii update` can be used like with b
 
 **Listening variables (`listen`)**
 
-```js
+```javascript
 enter([
   listen("foo", #{
     initial: "whatever",
@@ -94,7 +94,7 @@ As we discussed earlier, all variables are only available locally. So, you would
 
 Here is an example of how it is done:
 
-```js
+```javascript
 let foo = "example";
 
 enter([
