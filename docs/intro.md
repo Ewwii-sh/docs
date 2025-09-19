@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Ewwii - Widgets for everyone made better!
+# Ewwii - Building Widgets Made Better!
 
 Ewwii (ElKowar's Wacky Widgets improved interface) is a foork of
 Eww (ElKowar's Wacky Widgets) which is a
