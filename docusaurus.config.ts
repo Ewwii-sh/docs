@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Ewwii docs",
   tagline: "The documentation of ewwii",
-  favicon: "/EwwiiLogo.png",
+  favicon: "img/EwwiiLogo.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -66,10 +66,10 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Ewwii",
+      title: "Ewwii Docs",
       logo: {
         alt: "Ewwii Logo",
-        src: "/EwwiiLogo.png",
+        src: "img/EwwiiLogo.png",
       },
       items: [
         {
