@@ -42,10 +42,20 @@ jobs:
       - name: Install Node dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Clone Ewwii repo if missing
+      - name: Clone or update Ewwii repo
         run: |
-          if [ ! -d "ewwii" ]; then
-            git clone https://github.com/Ewwii-sh/ewwii.git ewwii
+          if [ -d "ewwii/.git" ]; then
+            echo "Ewwii repo exists, fetching missing files..."
+            cd ewwii
+            git fetch --all --tags --force
+            git reset --hard origin/main
+          else
+            echo "Ewwii repo missing, doing a partial clone..."
+            git init ewwii
+            cd ewwii
+            git remote add origin https://github.com/Ewwii-sh/ewwii.git
+            git fetch --depth=1 origin main
+            git checkout -f FETCH_HEAD
           fi
 
       - name: Setup Rust toolchain
