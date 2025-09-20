@@ -42,8 +42,11 @@ jobs:
       - name: Install Node dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Clone Ewwii repo
-        run: git clone https://github.com/Ewwii-sh/ewwii.git ewwii
+      - name: Clone Ewwii repo if missing
+        run: |
+          if [ ! -d "ewwii" ]; then
+            git clone https://github.com/Ewwii-sh/ewwii.git ewwii
+          fi
 
       - name: Generate Rhai docs for next
         run: |
