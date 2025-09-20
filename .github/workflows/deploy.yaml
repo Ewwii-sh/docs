@@ -32,7 +32,6 @@ jobs:
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-cargo-
-          save-always: true
 
       - name: Cache Node deps
         uses: actions/setup-node@v3
@@ -85,6 +84,18 @@ jobs:
             echo "Processing version $v"
             mkdir -p ../versioned_docs/version-$v/modules/
             git checkout "v${v}"
+
+            echo
+            echo "+++ Debug: target/ contents before cargo run for version $v +++"
+            if [ -d target ]; then
+              ls -alh target
+              echo "Listing all files under target/"
+              find target -maxdepth 2 -type f -exec ls -lh {} \;
+            else
+              echo "target/ folder does not exist"
+            fi
+            echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            echo
 
             cargo +1.89.0 run --release -p generate-rhai-docs --locked
 
