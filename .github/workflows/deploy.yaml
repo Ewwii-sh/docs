@@ -32,6 +32,7 @@ jobs:
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-cargo-
+          save-always: true
 
       - name: Cache Node deps
         uses: actions/setup-node@v3
@@ -58,13 +59,6 @@ jobs:
             echo "+++++++++++++++++++++++++++++++++"
             echo "Ewwii conents: "
             ls -a
-            echo "+++++++++++++++++++++++++++++++++"
-            echo
-
-            echo
-            echo "+++++++++++++++++++++++++++++++++"
-            echo "Ewwii target conents: "
-            ls -a target
             echo "+++++++++++++++++++++++++++++++++"
             echo
 
