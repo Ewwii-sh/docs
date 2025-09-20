@@ -1,3 +1,7 @@
+---
+sidebar_position: 2.5
+---
+
 # Variables
 
 Now that you feel sufficiently greeted by your bar, you may realize that showing data like the time and date might be even more useful than having a button that greets you.

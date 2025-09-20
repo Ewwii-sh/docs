@@ -1,3 +1,7 @@
+---
+sidebar_position: 2.2
+---
+
 # Fundamentals
 
 Ewwii uses Rhai as its configuration language. But instead of just pure Rhai, ewwii has its own layout that users should follow to create widgets using Rhai. And you may be wondering why ewwii has a "custom" layout instead of allowing users to just use pure Rhai. It's good question and the reason why ewwii has a custom layout is because it tries to remove unnecessary complexity.

@@ -1,3 +1,7 @@
+---
+sidebar_position: 2.3
+---
+
 # Rendering and Best Practices
 
 ## Rendering children in your widgets

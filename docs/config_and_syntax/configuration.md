@@ -1,3 +1,7 @@
+---
+sidebar_position: 2.1
+---
+
 # Writing your ewwii configuration
 
 (For a list of all built-in widgets (i.e. `box`, `label`, `button`), see [Widget Documentation](/docs/widgets/widgets.md).)

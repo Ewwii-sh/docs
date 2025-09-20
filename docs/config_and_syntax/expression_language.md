@@ -1,3 +1,7 @@
+---
+sidebar_position: 2.4
+---
+
 # The Rhai Expression Engine
 
 Ewwii uses [Rhai](https://rhai.rs/) as its core expression and scripting engine. This means your configuration is more than just static values or simple substitutions—it’s **real code**, and you can use it anywhere dynamic behavior is needed.
