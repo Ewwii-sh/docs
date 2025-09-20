@@ -69,7 +69,7 @@ jobs:
       - name: Generate Rhai docs for next
         run: |
           mkdir -p ./tools/generate-rhai-docs/auto_gen/
-          cargo run --release -p generate-rhai-docs
+          cargo +1.89.0 run --release -p generate-rhai-docs
 
           mkdir -p ./docs/modules/
           cp -r ./tools/generate-rhai-docs/auto_gen/* ../docs/modules/
@@ -85,7 +85,7 @@ jobs:
             mkdir -p ../versioned_docs/version-$v/modules/
             git checkout "v${v}"
 
-            cargo run --release -p generate-rhai-docs
+            cargo +1.89.0 run --release -p generate-rhai-docs
 
             cp -r ./tools/generate-rhai-docs/auto_gen/* ../versioned_docs/version-$v/modules/
           done
