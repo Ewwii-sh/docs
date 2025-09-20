@@ -12,7 +12,7 @@ In Ewwii’s Rhai-based configuration system, you can define wrapper functions t
 
 Here's an example of a custom container that adds a label before its children:
 
-```javascript
+```js
 fn labeled_container(name, children = []) {
   return box(#{ class: "container" }, [label(#{text: name})] + children)
 }
@@ -20,7 +20,7 @@ fn labeled_container(name, children = []) {
 
 You can call it like this:
 
-```javascript
+```js
 labeled_container("foo", [
   button(#{ onclick: "notify-send hey ho", label: "Click me" }),
 ]);
@@ -28,7 +28,7 @@ labeled_container("foo", [
 
 Because children are just a list of widgets, you can also write functions that structure them however you'd like. For example, here's a layout that places the first two children side by side:
 
-```javascript
+```js
 fn two_boxes(children = []) {
   return box(#{}, [
     box(#{ class: "first" }, [children[0]]),
@@ -39,7 +39,7 @@ fn two_boxes(children = []) {
 
 And call it like this:
 
-```javascript
+```js
 two_boxes([label(#{ text: "First" }), label(#{ text: "Second" })]);
 ```
 
@@ -56,7 +56,7 @@ or if you want to change the widget structure in some other, more complex way.
 
 For this, you can make use of one of ewwii's most powerful features: the `literal` widget.
 
-```javascript
+```js
 let variable_containing_rhai = "(box (button 'foo') (button 'bar'))";
 
 // Then, inside your widget, use:
@@ -86,7 +86,7 @@ ewwii open my_bar --screen 1 --id secondary
 
 If you want to display a list of values, you can use the `for`-Element to fill a container with a list of elements generated from a JSON-array.
 
-```javascript
+```js
 let my_array = [1, 2, 3];
 
 // Then, inside your widget, you can use
@@ -110,7 +110,7 @@ There are two options to achieve this:
 
 ### Using `import/export`
 
-```javascript
+```js
 // in ./foo/baz.rhai
 /// Note: all functions are automatically exported.
 fn greet() { return "Greetings!" }

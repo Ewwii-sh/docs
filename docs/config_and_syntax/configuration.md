@@ -30,7 +30,7 @@ Firstly, you will need to create a top-level window. Here, you configure things 
 
 Let's look at an example window definition:
 
-```javascript ,ignore
+```js ,ignore
 enter([
   // Add all defwindow inside enter. Enter is the root of the config.
   defwindow(
@@ -109,7 +109,7 @@ Depending on if you are using X11 or Wayland, some additional properties exist:
 
 While our bar is already looking great, it's a bit boring. Thus, let's add some actual content!
 
-```javascript
+```js
 fn greeter(name) {
   return box(#{
     orientation: "horizontal",
@@ -122,7 +122,7 @@ fn greeter(name) {
 
 To show this, let's replace the text in our window definition with a call to this new widget:
 
-```javascript
+```js
 enter([
   defwindow(
     "example",

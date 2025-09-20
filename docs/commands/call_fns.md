@@ -26,14 +26,14 @@ But, there is one solution though! You can call external functions from function
 
 **Example:**
 
-```javascript
+```js
 // in external.rhai
 fn awesome_fn() {
     print("Awesome fn triggered!");
 }
 ```
 
-```javascript
+```js
 // in ewwii.rhai
 fn call_awesome_fn() {
     import "external" as external;
