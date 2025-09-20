@@ -53,6 +53,8 @@ jobs:
             echo "Ewwii repo missing, doing a partial clone..."
             git init ewwii
             cd ewwii
+            echo "Ewwii conents: "
+            ls -a
             git remote add origin https://github.com/Ewwii-sh/ewwii.git
             git fetch --depth=1 origin main
             git checkout -f FETCH_HEAD
