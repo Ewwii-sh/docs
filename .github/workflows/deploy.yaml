@@ -61,6 +61,13 @@ jobs:
             echo "+++++++++++++++++++++++++++++++++"
             echo
 
+            echo
+            echo "+++++++++++++++++++++++++++++++++"
+            echo "Ewwii target conents: "
+            ls -a target
+            echo "+++++++++++++++++++++++++++++++++"
+            echo
+
             git remote add origin https://github.com/Ewwii-sh/ewwii.git
             git fetch --depth=1 origin main
             git checkout -f FETCH_HEAD
