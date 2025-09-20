@@ -71,7 +71,7 @@ jobs:
           mkdir -p ./tools/generate-rhai-docs/auto_gen/
           cargo +1.89.0 run --release -p generate-rhai-docs
 
-          mkdir -p ./docs/modules/
+          mkdir -p ../docs/modules/
           cp -r ./tools/generate-rhai-docs/auto_gen/* ../docs/modules/
         working-directory: ./ewwii
 
