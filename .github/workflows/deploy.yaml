@@ -29,13 +29,9 @@ jobs:
             ~/.cargo/registry
             ~/.cargo/git
             ewwii/target
-          key: ${{ runner.os }}-cargo-${{ hashFiles('ewwii/Cargo.lock') }}
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-cargo-
-
-      - name: Check cached target
-        run: |
-          ls -la ewwii/target
 
       - name: Cache Node deps
         uses: actions/setup-node@v3
