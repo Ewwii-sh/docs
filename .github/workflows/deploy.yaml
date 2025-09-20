@@ -23,15 +23,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Cache Rust deps
-        uses: actions/cache@v4
+        uses: Swatinem/rust-cache@v2
         with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            ewwii/target
+          prefix-key: "v0-rust"
+          shared-key: "rust-deps"
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-
+          env-vars: "CARGO CC CFLAGS CXX CMAKE RUST"
+          cache-targets: true
+          workspaces: |
+            ewwii -> target
 
       - name: Cache Node deps
         uses: actions/setup-node@v3
