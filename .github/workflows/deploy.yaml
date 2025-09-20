@@ -66,9 +66,6 @@ jobs:
             git checkout -f FETCH_HEAD
           fi
 
-      - name: Setup Rust toolchain
-        run: rustup default stable
-
       - name: Generate Rhai docs for next
         run: |
           mkdir -p ./tools/generate-rhai-docs/auto_gen/

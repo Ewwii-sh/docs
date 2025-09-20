@@ -15,4 +15,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
 ENV PATH="/root/.cargo/bin:$PATH"
 
+RUN rustup install 1.89.0
+RUN rustup install stable
+RUN rustup default stable
+
 WORKDIR /workspace
