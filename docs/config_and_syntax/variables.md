@@ -86,11 +86,11 @@ These include values such as your CPU and RAM usage.
 These mostly contain their data as JSON, which you can then get using the [json access syntax](expression_language.md).
 All available magic variables are listed [here](magic-vars.md). -->
 
-<div class="warning">
-<strong>Warning:</strong> Dynamic variables created by `poll` or `listen` handlers
-should always be defined inside an <code>enter([])</code> block. 
-If `poll` or `listen` is defined outside the <code>enter([])</code> block, then they simply will be ignored.
-</div>
+:::warning
+Dynamic variables created by `poll` or `listen` handlers
+should always be defined inside an `enter([])` block.
+If `poll` or `listen` is defined outside the `enter([])` block, then they simply will be ignored.
+:::
 
 ## Passing variables
 
