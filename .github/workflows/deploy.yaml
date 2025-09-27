@@ -68,11 +68,11 @@ jobs:
 
       - name: Generate Rhai docs for next
         run: |
-          mkdir -p ./tools/generate-rhai-docs/auto_gen/
-          cargo +1.89.0 run --release -p generate-rhai-docs --locked
+          mkdir -p ./rhai_auto_gen/
+          cargo +1.89.0 run --release -p generate-rhai-docs --locked -- ./rhai_auto_gen/*
 
           mkdir -p ../docs/modules/
-          cp -r ./tools/generate-rhai-docs/auto_gen/* ../docs/modules/
+          cp -r ./rhai_auto_gen/* ../docs/modules/
         working-directory: ./ewwii
 
       - name: Generate Rhai docs for all frozen versions
@@ -84,10 +84,12 @@ jobs:
             mkdir -p ../versioned_docs/version-$v/modules/
             git checkout "v${v}"
 
-            rm -rf ./tools/generate-rhai-docs/auto_gen/*
-            cargo +1.89.0 run --release -p generate-rhai-docs --locked
+            rm -rf ./rhai_auto_gen
+            mkdir -p ./rhai_auto_gen
 
-            cp -r ./tools/generate-rhai-docs/auto_gen/* ../versioned_docs/version-$v/modules/
+            cargo +1.89.0 run --release -p generate-rhai-docs --locked -- ./rhai_auto_gen/*
+
+            cp -r ./rhai_auto_gen/* ../versioned_docs/version-$v/modules/
           done
         working-directory: ./ewwii
 
