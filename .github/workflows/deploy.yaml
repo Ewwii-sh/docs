@@ -88,6 +88,7 @@ jobs:
                 # where we didn't have the generator setup
                 # for recent assumptions made when we switched
                 # to docusarus.
+                git fetch origin +b6c38aeddc13b2943da78f9f8789d8582378008e
                 git checkout b6c38aeddc13b2943da78f9f8789d8582378008e
             else
                 git checkout "v$v"
