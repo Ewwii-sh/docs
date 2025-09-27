@@ -98,12 +98,13 @@ Depending on if you are using X11 or Wayland, some additional properties exist:
 
 #### Wayland
 
-|    Property | Description                                                                                                                                                            |
-| ----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  `stacking` | Where the window should appear in the stack. Possible values: `fg`, `bg`, `overlay`, `bottom`.                                                                         |
-| `exclusive` | Whether the compositor should reserve space for the window automatically. Either `true` or `false`. If `true` `:anchor` has to include `center`.                       |
-| `focusable` | Whether the window should be able to be focused. This is necessary for any widgets that use the keyboard to work. Possible values: `none`, `exclusive` and `ondemand`. |
-| `namespace` | Set the wayland layersurface namespace ewwii uses. Accepts a `string` value.                                                                                           |
+|       Property | Description                                                                                                                                                              |
+| -------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|     `stacking` | Where the window should appear in the stack. Possible values: `fg`, `bg`, `overlay`, `bottom`.                                                                           |
+|    `exclusive` | Whether the compositor should reserve space for the window automatically. Either `true` or `false`. If `true`, `:anchor` has to include `center`.                        |
+|    `focusable` | Whether the window should be able to be focused. This is necessary for any widgets that use the keyboard to work. Possible values: `none`, `exclusive` and `ondemand`.   |
+|    `namespace` | Set the wayland layersurface namespace ewwii uses. Accepts a `string` value.                                                                                             |
+| `force_normal` | Whether the ewwii window should forcefully act normal. Either `true` or `false`. If `true`, `exclusive`, `stacking`, `namespace`, and geometry `anchor` will be ignored. |
 
 ## Your first widget
 
