@@ -82,7 +82,16 @@ jobs:
           for v in $versions; do
             echo "Processing version $v"
             mkdir -p ../versioned_docs/version-$v/modules/
-            git checkout "v${v}"
+
+            if [ "$v" = "0.1.4" ]; then
+                # We do this because v0.1.4 is a commit
+                # where we didn't have the generator setup
+                # for recent assumptions made when we switched
+                # to docusarus.
+                git checkout b6c38aeddc13b2943da78f9f8789d8582378008e
+            else
+                git checkout "v$v"
+            fi
 
             rm -rf ./rhai_auto_gen
             mkdir -p ./rhai_auto_gen
