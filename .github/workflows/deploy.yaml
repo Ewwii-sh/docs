@@ -69,7 +69,7 @@ jobs:
       - name: Generate Rhai docs for next
         run: |
           mkdir -p ./rhai_auto_gen/
-          cargo +1.89.0 run --release -p generate-rhai-docs --locked -- ./rhai_auto_gen/*
+          cargo +1.89.0 run --release -p generate-rhai-docs --locked -- ./rhai_auto_gen/
 
           mkdir -p ../docs/modules/
           cp -r ./rhai_auto_gen/* ../docs/modules/
@@ -87,7 +87,7 @@ jobs:
             rm -rf ./rhai_auto_gen
             mkdir -p ./rhai_auto_gen
 
-            cargo +1.89.0 run --release -p generate-rhai-docs --locked -- ./rhai_auto_gen/*
+            cargo +1.89.0 run --release -p generate-rhai-docs --locked -- ./rhai_auto_gen/
 
             cp -r ./rhai_auto_gen/* ../versioned_docs/version-$v/modules/
           done
