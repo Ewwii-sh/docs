@@ -77,7 +77,6 @@ jobs:
 
       - name: Generate Rhai docs for all frozen versions
         run: |
-          cd ewwii
           versions=$(jq -r '.[]' ../versions.json)
           git fetch --tags --force
           for v in $versions; do
@@ -85,10 +84,12 @@ jobs:
             mkdir -p ../versioned_docs/version-$v/modules/
             git checkout "v${v}"
 
+            rm -rf ./tools/generate-rhai-docs/auto_gen/*
             cargo +1.89.0 run --release -p generate-rhai-docs --locked
 
             cp -r ./tools/generate-rhai-docs/auto_gen/* ../versioned_docs/version-$v/modules/
           done
+        working-directory: ./ewwii
 
       - name: Build site
         run: pnpm run build
