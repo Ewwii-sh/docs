@@ -9,7 +9,7 @@ Installation is the most important step before using ewwii, and we have a user-f
 Just run the following command and you are good to go!
 
 ```bash
-curl -sSL https://ewwii-sh.github.io/install.sh | install.sh
+curl -sSL https://ewwii-sh.github.io/install.sh | sh
 ```
 
 :::info
