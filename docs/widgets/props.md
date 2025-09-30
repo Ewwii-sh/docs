@@ -192,12 +192,6 @@ _None listed_
 - `wrap_mode`: `string` wrap mode ("word", "char", etc.)
 - `lines`: `int` max lines (−1 = unlimited)
 
-## literal
-
-**Properties**
-
-- `content`: `string` raw yuck
-
 ## calendar
 
 **Properties**
