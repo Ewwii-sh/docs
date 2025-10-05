@@ -7,7 +7,6 @@ Below is a list of available widgets and the parameters each accepts.
 These functions correspond to actual GTK widgets and render visible UI elements.
 
 - **box**: `props`, `children`
-- **centerbox**: `props`, `children`
 - **eventbox**: `props`, `children`
 - **tooltip**: `props`, `children`
 - **circular_progress**: `props`
