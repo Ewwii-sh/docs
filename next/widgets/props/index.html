@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Widget Properties | Ewwii docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://ewwii-sh.github.io/docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://ewwii-sh.github.io/docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://ewwii-sh.github.io/docs/next/widgets/props"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Widget Properties | Ewwii docs"><meta data-rh="true" name="description" content="widget"><meta data-rh="true" property="og:description" content="widget"><link data-rh="true" rel="icon" href="/docs/img/EwwiiLogo.png"><link data-rh="true" rel="canonical" href="https://ewwii-sh.github.io/docs/next/widgets/props"><link data-rh="true" rel="alternate" href="https://ewwii-sh.github.io/docs/next/widgets/props" hreflang="en"><link data-rh="true" rel="alternate" href="https://ewwii-sh.github.io/docs/next/widgets/props" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Widgets","item":"https://ewwii-sh.github.io/docs/next/widgets/"},{"@type":"ListItem","position":2,"name":"Widget Properties","item":"https://ewwii-sh.github.io/docs/next/widgets/props"}]}</script><link rel="stylesheet" href="/docs/assets/css/styles.d1c5fbba.css">
-<script src="/docs/assets/js/runtime~main.6a6ae8a7.js" defer="defer"></script>
+<script src="/docs/assets/js/runtime~main.e7d1655d.js" defer="defer"></script>
 <script src="/docs/assets/js/main.45cb9335.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -28,6 +28,7 @@
 <li><code>visible</code>: <code>bool</code> visibility of the widget</li>
 <li><code>style</code>: <code>string</code> inline scss style applied to the widget</li>
 <li><code>css</code>: <code>string</code> scss code applied to the widget</li>
+<li><code>can_target</code>: <code>bool</code> make the widget targettable to pointer events.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_mHud" id="combo-box-text">combo-box-text<a href="#combo-box-text" class="hash-link" aria-label="Direct link to combo-box-text" title="Direct link to combo-box-text">​</a></h2>
 <p><strong>Properties</strong></p>
@@ -118,8 +119,16 @@
 <li><code>image_height</code>: <code>int</code> image height</li>
 <li><code>preserve_aspect_ratio</code>: <code>bool</code> keep aspect ratio</li>
 <li><code>fill_svg</code>: <code>string</code> fill color for SVGs</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_mHud" id="icon">icon<a href="#icon" class="hash-link" aria-label="Direct link to icon" title="Direct link to icon">​</a></h2>
+<p><strong>Properties</strong></p>
+<ul>
+<li><code>path</code>: <code>string</code> image file path</li>
+<li><code>image_width</code>: <code>int</code> image width</li>
+<li><code>image_height</code>: <code>int</code> image height</li>
+<li><code>preserve_aspect_ratio</code>: <code>bool</code> keep aspect ratio</li>
+<li><code>fill_svg</code>: <code>string</code> fill color for SVGs</li>
 <li><code>icon</code>: <code>string</code> theme icon name</li>
-<li><code>icon_size</code>: <code>string</code> size of the icon</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_mHud" id="box">box<a href="#box" class="hash-link" aria-label="Direct link to box" title="Direct link to box">​</a></h2>
 <p><strong>Properties</strong></p>
@@ -134,11 +143,6 @@
 <h2 class="anchor anchorWithStickyNavbar_mHud" id="tooltip">tooltip<a href="#tooltip" class="hash-link" aria-label="Direct link to tooltip" title="Direct link to tooltip">​</a></h2>
 <p><strong>Properties</strong></p>
 <p><em>None listed</em></p>
-<h2 class="anchor anchorWithStickyNavbar_mHud" id="centerbox">centerbox<a href="#centerbox" class="hash-link" aria-label="Direct link to centerbox" title="Direct link to centerbox">​</a></h2>
-<p><strong>Properties</strong></p>
-<ul>
-<li><code>orientation</code>: <code>string</code> direction of layout</li>
-</ul>
 <h2 class="anchor anchorWithStickyNavbar_mHud" id="scroll">scroll<a href="#scroll" class="hash-link" aria-label="Direct link to scroll" title="Direct link to scroll">​</a></h2>
 <p><strong>Properties</strong></p>
 <ul>
@@ -172,7 +176,6 @@
 <li><code>unindent</code>: <code>bool</code> strip leading spaces</li>
 <li><code>markup</code>: <code>string</code> Pango markup</li>
 <li><code>wrap</code>: <code>bool</code> wrap text</li>
-<li><code>angle</code>: <code>float</code> rotation angle</li>
 <li><code>gravity</code>: <code>string</code> text gravity</li>
 <li><code>xalign</code>: <code>float</code> horizontal alignment</li>
 <li><code>yalign</code>: <code>float</code> vertical alignment</li>
@@ -186,7 +189,6 @@
 <li><code>day</code>: <code>float</code> selected day</li>
 <li><code>month</code>: <code>float</code> selected month</li>
 <li><code>year</code>: <code>float</code> selected year</li>
-<li><code>show_details</code>: <code>bool</code> show details</li>
 <li><code>show_heading</code>: <code>bool</code> show heading</li>
 <li><code>show_day_names</code>: <code>bool</code> show day names</li>
 <li><code>show_week_numbers</code>: <code>bool</code> show week numbers</li>
@@ -198,35 +200,6 @@
 <ul>
 <li><code>selected</code>: <code>int</code> child index</li>
 <li><code>transition</code>: <code>string</code> animation name</li>
-<li><code>same_size</code>: <code>bool</code> equal child size</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_mHud" id="transform">transform<a href="#transform" class="hash-link" aria-label="Direct link to transform" title="Direct link to transform">​</a></h2>
-<p><strong>Properties</strong></p>
-<ul>
-<li><code>rotate</code>: <code>float</code> rotation angle</li>
-<li><code>transform_origin_x</code>: <code>string</code> transform origin x</li>
-<li><code>transform_origin_y</code>: <code>string</code> transform origin y</li>
-<li><code>translate_x</code>: <code>string</code> shift x</li>
-<li><code>translate_y</code>: <code>string</code> shift y</li>
-<li><code>scale-x</code>: <code>string</code> scale x</li>
-<li><code>scale-y</code>: <code>string</code> scale y</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_mHud" id="circular-progress">circular-progress<a href="#circular-progress" class="hash-link" aria-label="Direct link to circular-progress" title="Direct link to circular-progress">​</a></h2>
-<p><strong>Properties</strong></p>
-<ul>
-<li><code>value</code>: <code>float</code> 0–100 progress</li>
-<li><code>start_at</code>: <code>float</code> start percentage</li>
-<li><code>thickness</code>: <code>float</code> line thickness</li>
-<li><code>clockwise</code>: <code>bool</code> direction</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_mHud" id="graph">graph<a href="#graph" class="hash-link" aria-label="Direct link to graph" title="Direct link to graph">​</a></h2>
-<p><strong>Properties</strong></p>
-<ul>
-<li><code>value</code>: <code>float</code> current value</li>
-<li><code>thickness</code>: <code>float</code> line thickness</li>
-<li><code>time_range</code>: <code>duration</code> duration to track</li>
-<li><code>min</code>: <code>float</code> minimum value</li>
-<li><code>max</code>: <code>float</code> maximum value</li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/next/widgets/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Widgets</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/next/widgets/widgets_and_params"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Widgets &amp; Parameters</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_jTax thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#widget" class="table-of-contents__link toc-highlight">widget</a></li><li><a href="#combo-box-text" class="table-of-contents__link toc-highlight">combo-box-text</a></li><li><a href="#expander" class="table-of-contents__link toc-highlight">expander</a></li><li><a href="#revealer" class="table-of-contents__link toc-highlight">revealer</a></li><li><a href="#checkbox" class="table-of-contents__link toc-highlight">checkbox</a></li><li><a href="#color-button" class="table-of-contents__link toc-highlight">color-button</a></li><li><a href="#color-chooser" class="table-of-contents__link toc-highlight">color-chooser</a></li><li><a href="#slider" class="table-of-contents__link toc-highlight">slider</a></li><li><a href="#progress" class="table-of-contents__link toc-highlight">progress</a></li><li><a href="#input" class="table-of-contents__link toc-highlight">input</a></li><li><a href="#button" class="table-of-contents__link toc-highlight">button</a></li><li><a href="#image" class="table-of-contents__link toc-highlight">image</a></li><li><a href="#box" class="table-of-contents__link toc-highlight">box</a></li><li><a href="#overlay" class="table-of-contents__link toc-highlight">overlay</a></li><li><a href="#tooltip" class="table-of-contents__link toc-highlight">tooltip</a></li><li><a href="#centerbox" class="table-of-contents__link toc-highlight">centerbox</a></li><li><a href="#scroll" class="table-of-contents__link toc-highlight">scroll</a></li><li><a href="#eventbox" class="table-of-contents__link toc-highlight">eventbox</a></li><li><a href="#label" class="table-of-contents__link toc-highlight">label</a></li><li><a href="#calendar" class="table-of-contents__link toc-highlight">calendar</a></li><li><a href="#stack" class="table-of-contents__link toc-highlight">stack</a></li><li><a href="#transform" class="table-of-contents__link toc-highlight">transform</a></li><li><a href="#circular-progress" class="table-of-contents__link toc-highlight">circular-progress</a></li><li><a href="#graph" class="table-of-contents__link toc-highlight">graph</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.com/invite/63bKPx3Wb6" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_Ctg3"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://ewwii-sh.github.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">Home<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_Ctg3"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Ewwii-sh/" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_Ctg3"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Ewwii, All rights served.</div></div></div></footer></div>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/next/widgets/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Widgets</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/next/widgets/widgets_and_params"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Widgets &amp; Parameters</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_jTax thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#widget" class="table-of-contents__link toc-highlight">widget</a></li><li><a href="#combo-box-text" class="table-of-contents__link toc-highlight">combo-box-text</a></li><li><a href="#expander" class="table-of-contents__link toc-highlight">expander</a></li><li><a href="#revealer" class="table-of-contents__link toc-highlight">revealer</a></li><li><a href="#checkbox" class="table-of-contents__link toc-highlight">checkbox</a></li><li><a href="#color-button" class="table-of-contents__link toc-highlight">color-button</a></li><li><a href="#color-chooser" class="table-of-contents__link toc-highlight">color-chooser</a></li><li><a href="#slider" class="table-of-contents__link toc-highlight">slider</a></li><li><a href="#progress" class="table-of-contents__link toc-highlight">progress</a></li><li><a href="#input" class="table-of-contents__link toc-highlight">input</a></li><li><a href="#button" class="table-of-contents__link toc-highlight">button</a></li><li><a href="#image" class="table-of-contents__link toc-highlight">image</a></li><li><a href="#icon" class="table-of-contents__link toc-highlight">icon</a></li><li><a href="#box" class="table-of-contents__link toc-highlight">box</a></li><li><a href="#overlay" class="table-of-contents__link toc-highlight">overlay</a></li><li><a href="#tooltip" class="table-of-contents__link toc-highlight">tooltip</a></li><li><a href="#scroll" class="table-of-contents__link toc-highlight">scroll</a></li><li><a href="#eventbox" class="table-of-contents__link toc-highlight">eventbox</a></li><li><a href="#label" class="table-of-contents__link toc-highlight">label</a></li><li><a href="#calendar" class="table-of-contents__link toc-highlight">calendar</a></li><li><a href="#stack" class="table-of-contents__link toc-highlight">stack</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.com/invite/63bKPx3Wb6" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_Ctg3"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://ewwii-sh.github.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">Home<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_Ctg3"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Ewwii-sh/" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_Ctg3"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Ewwii, All rights served.</div></div></div></footer></div>
 </body>
 </html>
