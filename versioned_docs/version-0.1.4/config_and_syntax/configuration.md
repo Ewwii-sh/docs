@@ -68,12 +68,7 @@ You can now open your first window by running `ewwii open example`! Glorious!
 
 **`monitor`-property**
 
-This field can be:
-
-- the string `<primary>`, in which case ewwii tries to identify the primary display (which may fail, especially on wayland)
-- an integer, declaring the monitor index
-- the name of the monitor
-- a string containing a JSON-array of monitor matchers, such as: `'["<primary>", "HDMI-A-1", "PHL 345B1C", 0]'`. Ewwii will try to find a match in order, allowing you to specify fallbacks.
+This field should be an integer, declaring the monitor index.
 
 **`geometry`-properties**
 
