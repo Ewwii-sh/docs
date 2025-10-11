@@ -68,7 +68,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onchange`: `string` command on color select
 - `timeout`: `duration` Default: "200ms"
 
-## slider
+## scale
 
 **Properties**
 

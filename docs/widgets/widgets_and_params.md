@@ -17,7 +17,7 @@ These functions correspond to actual GTK widgets and render visible UI elements.
 - **circular_progress**: `props`
 - **graph**: `props`
 - **transform**: `props`
-- **slider**: `props`
+- **scale**: `props`
 - **progress**: `props`
 - **image**: `props`
 - **button**: `props`
