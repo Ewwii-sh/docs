@@ -19,6 +19,8 @@ These properties apply to all widgets, and can be used anywhere!
 - `style`: `string` inline scss style applied to the widget
 - `css`: `string` scss code applied to the widget
 - `can_target`: `bool` make the widget targettable to pointer events.
+- `focusable`: `bool` make widget focusable
+- `widget_name`: `strong` custom widget name
 
 ## combo-box-text
 
@@ -164,6 +166,9 @@ _None listed_
 
 **Properties**
 
+- `orientation`: `string` layout direction
+- `spacing`: `int` spacing between children
+- `space_evenly`: `bool` distribute children evenly
 - `timeout`: `duration` Default: "200ms"
 - `onscroll`: `string` command on scroll (`{}` becomes direction)
 - `onhover`: `string` command on hover
@@ -175,6 +180,8 @@ _None listed_
 - `onclick`: `string` command on click
 - `onmiddleclick`: `string` command on middle click
 - `onrightclick`: `string` command on right click
+- `onkeypress`: `string` command on any key press (`{}` becomes the id of the key pressed)
+- `onkeyrelease`: `string` command on any key release (`{}` becomes the id of the key released)
 
 ## label
 
@@ -214,3 +221,12 @@ _None listed_
 
 - `selected`: `int` child index
 - `transition`: `string` animation name
+
+## flowbox
+
+**Properties**
+
+- `orientation`: `string` layout direction
+- `space_evenly`: `bool` distribute children evenly
+- `onaccept`: `string` command on Enter (use `{}` for selected widget's name)
+- `selection_model`: `string` selection model
