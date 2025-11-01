@@ -3,7 +3,7 @@ FROM rust:1.90.0-slim
 # Install necessary system dependencies
 RUN apt-get update && apt-get install -y \
       pkg-config libcairo2-dev libglib2.0-dev libgirepository1.0-dev \
-      libpango1.0-dev libatk1.0-dev libgtk-4-dev libgraphene-1.0-dev \
+      libpango1.0-dev libatk1.0-dev libgtk-4-dev libgtk-3-dev libgraphene-1.0-dev \
       jq git curl gnupg lsb-release ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
