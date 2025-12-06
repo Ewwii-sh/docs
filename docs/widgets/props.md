@@ -99,6 +99,7 @@ These properties apply to all widgets, and can be used anywhere!
 **Properties**
 
 - `value`: `string` set current text
+- `placeholder`: `string` set a placeholder text
 - `onchange`: `string` command on change (use `{}` for value)
 - `timeout`: `duration` Default: "200ms"
 - `onaccept`: `string` command on Enter (use `{}` for value)
@@ -221,6 +222,7 @@ _None listed_
 
 - `selected`: `int` child index
 - `transition`: `string` animation name
+- `transition_duration`: `int` duration in millisecond as number
 
 ## flowbox
 

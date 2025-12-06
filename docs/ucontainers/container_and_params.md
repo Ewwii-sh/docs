@@ -8,4 +8,5 @@ Below is a list of available ucontainers and the parameters each accepts.
 
 ## UContainer Functions
 
-- **localbind**: `props`, `children`
+- **localbind**: `props`, `child`
+- **widget_control**: `props`, `child`
