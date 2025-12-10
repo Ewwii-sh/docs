@@ -18,6 +18,19 @@ localbind(#{
 ])
 ```
 
+## gtk_ui
+
+### Properties
+
+- `file`: `string` path to the Gtk .ui file to load
+- `id`: `string` id of the widget to load
+
+### Example
+
+```js
+gtk_ui("./example.ui", "my_button")
+```
+
 ## widget_control
 
 - `trigger`: `localsignal` triggered when localsignal prints something

@@ -10,3 +10,4 @@ Below is a list of available ucontainers and the parameters each accepts.
 
 - **localbind**: `props`, `child`
 - **widget_control**: `props`, `child`
+- **gtk_ui**: `string`, `string`

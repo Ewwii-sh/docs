@@ -94,6 +94,17 @@ These properties apply to all widgets, and can be used anywhere!
 - `value`: `float` progress (0–100)
 - `orientation`: `string` layout direction
 
+## circular_progress
+
+**Properties**
+
+- `value`: `float` the progression value, between (0-100)
+- `start_at`: `float` the percentage that the circle should start at
+- `thickness`: `float` the thickness of the circle
+- `clockwise`: `bool` wether the progress bar spins clockwise or counter clockwise
+- `fg_color`: `string` foreground color of circle
+- `bg_color`: `string` background color of circle
+
 ## input
 
 **Properties**
