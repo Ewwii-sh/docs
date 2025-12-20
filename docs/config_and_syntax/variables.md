@@ -52,6 +52,10 @@ making the startup time faster. -->
 
 To externally update a polling variable, `ewwii update` can be used like with basic variables to assign a value. [Learn more about ewwii update](../commands/update.md).
 
+:::tip
+When a graph widget is driven by a polling variable, set `skip_unchanged` to false to ensure continuous updates.
+:::
+
 **Listening variables (`listen`)**
 
 ```js
