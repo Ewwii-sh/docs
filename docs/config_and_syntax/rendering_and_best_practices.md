@@ -13,7 +13,7 @@ In Ewwii’s Rhai-based configuration system, you can define wrapper functions t
 Here's an example of a custom container that adds a label before its children:
 
 ```js
-fn labeled_container(name, children = []) {
+fn labeled_container(name, children) {
   return box(#{ class: "container" }, [label(#{text: name})] + children)
 }
 ```
