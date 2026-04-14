@@ -29,7 +29,7 @@ labeled_container("foo", [
 Because children are just a list of widgets, you can also write functions that structure them however you'd like. For example, here's a layout that places the first two children side by side:
 
 ```js
-fn two_boxes(children = []) {
+fn two_boxes(children) {
   return box(#{}, [
     box(#{ class: "first" }, [children[0]]),
     box(#{ class: "second" }, [children[1]])
