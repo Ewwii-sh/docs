@@ -123,6 +123,7 @@ These properties apply to all widgets, and can be used anywhere!
 
 **Properties**
 
+- `label`: `string` label to show on the button
 - `timeout`: `duration` Default: "200ms"
 - `onclick`: `string` command on activation
 - `onmiddleclick`: `string` command on middle click
