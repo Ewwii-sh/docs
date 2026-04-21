@@ -245,13 +245,13 @@ _None listed_
 
 - `value`: `float` current value
 - `type`: `string` graph type. possible values: "line" (default), "step-line", "fill", "step-fill"
-- `time-range`: `duration` the range of time to show. Default: "10s"
+- `time_range`: `duration` the range of time to show. Default: "10s"
 - `min`: `float` minimum value
 - `max`: `float` maximum value
 - `dynamic`: `bool` whether the y range should dynamically change based on value. Default: true
 - `animate`: `bool` enable smooth scrolling. Default: true
-- `flip-x`: `bool` flip the graph horizontally. Default: false
-- `flip-y`: `bool` flip the graph horizontally. Default: false
+- `flip_x`: `bool` flip the graph horizontally. Default: false
+- `flip_y`: `bool` flip the graph horizontally. Default: false
 - `vertical`: `bool` if set to true, the x and y axes will be exchanged. Default: false
 - `thickness`: `float` the thickness of the line (for line charts). Default: 1.0
-- `line-style`: `string` changes the look of the edges in the graph (for line charts). possible values: "miter" (default), "bevel", "round"
+- `line_style`: `string` changes the look of the edges in the graph (for line charts). possible values: "miter" (default), "bevel", "round"
