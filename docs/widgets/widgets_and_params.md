@@ -42,11 +42,10 @@ These are not visible UI widgets but are essential for layout, data binding, or 
 - **poll**: `props`
 - **listen**: `props`
 
-:::note Recalling
+:::note Reminder
 
 - `props` param: Defined in `#{}`
 
 - `children` param: Defined in `[]`
 
 > Both of these are discussed in [chapter 2.2](/docs/config_and_syntax/config_fundamentals.md)
-> :::note
