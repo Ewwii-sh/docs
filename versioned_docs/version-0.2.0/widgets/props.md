@@ -19,7 +19,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `style`: `string` inline scss style applied to the widget
 - `css`: `string` scss code applied to the widget
 
-## combo-box-text
+## combo_box_text
 
 **Properties**
 
@@ -51,7 +51,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onchecked`: `string` command when checked
 - `onunchecked`: `string` command when unchecked
 
-## color-button
+## color_button
 
 **Properties**
 
@@ -59,7 +59,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onchange`: `string` command on color select
 - `timeout`: `duration` Default: "200ms"
 
-## color-chooser
+## color_chooser
 
 **Properties**
 
