@@ -83,9 +83,9 @@ All available magic variables are listed [here](magic-vars.md). -->
 
 **Using these variables**
 
-Since these are global variables, they can be used everywhere in the configuration using the `global` function.
+Since these are global variables, they can be used everywhere in the configuration using the `global` function. Their values can also be mutated temporarily for a property if you pair it with the `mutate` function.
 
-```js
+```nbcl
 Poll "time" {
   initial = "initial value"
   interval = "2s"
@@ -99,7 +99,12 @@ Window "1" {
 component CustomWidget (any: props) {
   Box {
     Label {
+      # Just use the value directly
       text = global("time")
+    }
+    Label {
+      # {self} is how you access the value of a global variable.
+      text = global("time").mutate("Time: {self}")
     }
   }
 }
