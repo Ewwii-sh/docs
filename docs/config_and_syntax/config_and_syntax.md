@@ -2,17 +2,17 @@
 sidebar_position: 2
 ---
 
-# Configuration & Syntax
+# Configuration
 
-This section introduces the foundational systems that define how you configure your UI, express logic, and work with dynamic data in Rahi (Ewwii's configuration language).
+This section introduces you to the configuration language of ewwii, [Nbcl](https://nbcl-lang.github.io). It is **very** simple configuration language in which you can do scripting as well. With nbcl, you can declare the structure and content of your widgets, the geometry, position, the behavior of windows, etc. in a node based syntax.
 
-The configuration model is imparative by nature but will be used in a declarative format that is made to make configuring ewwii easy as well as to provide a logical way of configuring. You'll also work with special built in functions and modules that expose live system state and other information.
+Additionally, any styles are defined in CSS or SCSS (which is mostly just slightly improved CSS syntax).
+While ewwii supports a significant portion of the CSS you know from the web, not everything is supported, as ewwii relies on GTK's own CSS engine. Notably, some animation features are unsupported, as well as most layout-related CSS properties such as flexbox, `float`, absolute position or `width`/`height`.
 
-We'll cover:
 
-- The structure of configuration files
-- Embedding expressions within properties and attributes
-- Accessing and using built-in variables
-- Interpolation, scoping, and reactivity rules
+:::info
+You can make use of the nbcl tooling to get syntax highlighting and more!
 
-> If you're coming from EWW's Yuck, expect similarities in structure but with much more flexibility and logical programming.
+- If you're using vim/nvim, you can make use of [vim-nbcl](https://github.com/NBCL-Lang/vim-nbcl) for editor support.
+- If you're using VSCode, you can get syntax highlighting and formatting from [vscode-nbcl](https://github.com/NBCL-Lang/vscode-nbcl).
+:::

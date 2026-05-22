@@ -1,6 +1,42 @@
-import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import type { MDXPlugin } from "@docusaurus/mdx-loader";
+const { readFileSync } = require('fs');
+const { join } = require('path');
+import rehypeShiki, { RehypeShikiOptions } from "@shikijs/rehype";
+import { BundledLanguage, bundledLanguages } from "shiki";
+import {
+  transformerMetaHighlight,
+  transformerNotationDiff,
+  transformerNotationHighlight,
+  transformerNotationFocus,
+} from "@shikijs/transformers";
+
+const nbclGrammar = JSON.parse(
+  readFileSync(join(__dirname, 'src/grammars/nbcl.tmLanguage.json'), 'utf8')
+);
+
+const shikiOptions = {
+  themes: {
+    light: "github-light",
+    dark: "github-dark"
+  },
+  langs: [
+    {
+      name: 'nbcl',
+      aliases: ['nbcl'],
+      scopeName: nbclGrammar.scopeName,
+      ...nbclGrammar,
+    },
+    ...Object.keys(bundledLanguages) as BundledLanguage[]
+  ],
+  transformers: [
+    transformerMetaHighlight(),
+    transformerNotationDiff(),
+    transformerNotationHighlight(),
+    transformerNotationFocus(),
+  ],
+} satisfies RehypeShikiOptions;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -43,17 +79,11 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "/",
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
+          beforeDefaultRehypePlugins: [
+            [
+              rehypeShiki, shikiOptions
+            ] satisfies MDXPlugin,
+          ],
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -116,10 +146,6 @@ const config: Config = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Ewwii, All rights served.`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
 

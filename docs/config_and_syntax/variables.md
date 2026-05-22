@@ -8,69 +8,32 @@ Now that you feel sufficiently greeted by your bar, you may realize that showing
 
 To implement dynamic content in your widgets, you make use of _variables_.
 
-## Rhai variables
+## Nbcl variables
 
-In Rhai, all variables are dynamically typed bindings to values. You can define variables using let, pass them as function parameters.
+In Nbcl, all variables are dynamically typed bindings to values. You can define variables using `let` or `const` keyword, pass them as function parameters.
 
-**Basic variables (`let`)**
-
-```js
-let foo = "value";
-```
-
-This is the simplest type of variable.
-Basic variables don't ever change automatically, if you need a dynamic variable, you can use built in functions like `poll()`, `listen()`, or maybe even the advanced `localsignal()` to register dynamic values which we will talk about in the following section.
-
-However, these variables are **local** and are only available in the scope they are defined in.
+**Basic variables (`let` and `const`)**
 
 ```js
-let foo = "example";
-
-tree([
-  defwindow("1", #{}, wont_work()),      // wont work
-  defwindow("2", #{}, will_work(foo)),   // will work
-  defwindow("3", #{}, will_also_work())  // will work
-])
-
-// Here we have 2 variables named:
-// - "time" (registered dynamically by poll) 
-// - "foo" (static rhai variable)
-
-// here is an example of something that wont
-fn wont_work() {
-  return box(#{}, [ label(#{ text: foo }) ]);
-}
-
-// here is an example of something that will work
-fn will_work(foo) { // foo is passed from `tree([])`
-  return box(#{}, [ label(#{ text: foo }) ]);
-}
-
-fn will_also_work() {
-  // This works because foo is redeclared in this scope.
-  let foo = "example2";
-  return box(#{}, [ label(#{ text: foo }) ]);
-}
+let foo = "value"
+const bar = "value"
 ```
+
+This is the simplest type of variable. These variables exist only during evaluation and changes to it does not effect the rendered widgets, if you need a dynamic variable that if updated, updates the widget, you can use built in `Poll` and `Listen` components  to register dynamic values which we will talk about in the following section.
 
 
 ## Dynamic global variables
 
-Just having rhai variables that wont update is pretty limiting. So, ewwii has two built in functions to register dynamic variables (which is also known as a signal) that can change according to the command. These variables are global, which means that it is available in all modules.
+Just having nbcl variables that wont update is pretty limiting. So, ewwii has two built in components to register dynamic variables (which is also known as a signal) that can change according to the command. These variables are global, which means that it is available in all modules.
 
-**Polling variables (`poll`)**
+**Polling variables (`Poll`)**
 
 ```js
-tree([
-  poll("var_name", #{
-      // It is recommended to have initial property passed.
-      // If not provided, it will default to no value which may cause problems when used.
-      // You can pass something like "" if you want no initial value.
-      initial: "inital value",
-      interval: "2s",
-      cmd: "date +%H:%M:%S", // command to execute
-  });
-])
+Poll "var_name" {
+  initial = "initial value"
+  interval = "2s"
+  cmd = "date +%H:%M:%S"
+}
 ```
 
 A polling variable is a variable which runs a provided shell-script repeatedly, in a given interval.
@@ -88,15 +51,13 @@ To externally update a polling variable, `ewwii update` can be used like with b
 When a graph widget is driven by a polling variable, set `skip_unchanged` to false to ensure continuous updates.
 :::
 
-**Listening variables (`listen`)**
+**Listening variables (`Listen`)**
 
 ```js
-tree([
-  listen("foo", #{
-    initial: "whatever",
-    cmd: "tail -F /tmp/some_file",
-  });
-])
+Listen "foo" {
+  initial = "whatever"
+  cmd = "tail -F /tmp/some_file"
+}
 ```
 
 Listening variables might be the most confusing of the bunch.
@@ -120,68 +81,26 @@ These include values such as your CPU and RAM usage.
 These mostly contain their data as JSON, which you can then get using the [json access syntax](expression_language.md).
 All available magic variables are listed [here](magic-vars.md). -->
 
-:::warning
-Dynamic variables created by `poll` or `listen` handlers
-should always be defined inside an `tree([])` block.
-If `poll` or `listen` is defined outside the `tree([])` block, then they simply will be ignored.
-:::
+**Using these variables**
 
-**Passing these variables**
-
-Since these are global variables, they can be used everywhere in the configuration.
+Since these are global variables, they can be used everywhere in the configuration using the `global` function.
 
 ```js
-tree([
-  poll("time", #{
-    initial: "inital value",
-    interval: "2s",
-    cmd: "date +%H:%M:%S",
-  }),
+Poll "time" {
+  initial = "initial value"
+  interval = "2s"
+  cmd = "date +%H:%M:%S"
+}
 
-  defwindow("1", #{}, widget())
-])
+Window "1" {
+  CustomWidget {}
+}
 
-fn widget() {
-  return box(#{}, [ label(#{ text: time }) ]);
+component CustomWidget (any: props) {
+  Box {
+    Label {
+      text = global("time")
+    }
+  }
 }
 ```
-
-## Advanced: Mutations to Global Variables
-
-In some cases, you may need to mutate the global variables in rhai itself to utilize some of its features. For this reason the `bound` function exists. Here is how to use it:
-
-```js
-tree([
-  poll("returned_example", #{
-    initial: "inital value",
-    interval: "2s",
-    // returns "Hello"
-    cmd: "./external_script.sh",
-  }),
-
-  defwindow("1", #{}, widget())
-])
-
-fn widget() {
-  let addition = ", World;
-
-  // signature of bound: `bound(array, closure)`
-  let mutated_value = bound([returned_example, addition], |vars| {
-    // what each value corresponds to in vars
-    // - vars[0] is first variable
-    // - vars[1] is second variable
-    // - vars[2] is third variable
-    // and so on...
-
-    let returned_example = vars[0];
-    let addition = vars[1];
-
-    return returned_example + addition
-  });
-  
-  return box(#{}, [ 
-    label(#{ text: "mutated value: " + mutated_value }) 
-  ]);
-}
-```
-

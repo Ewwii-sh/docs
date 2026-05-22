@@ -4,27 +4,23 @@ sidebar_position: 1
 
 # Ewwii - Building Widgets Made Better!
 
-Ewwii (ElKowar's Wacky Widgets improved interface) is a foork of
-Eww (ElKowar's Wacky Widgets) which is a
-widget system made in [Rust](https://www.rust-lang.org/),
-which lets you create your own widgets similarly to how you can in AwesomeWM.
+Ewwii is a rewrite of [Eww](https://github.com/elkowar/eww), and is a
+widget system written in [Rust](https://www.rust-lang.org/), which lets 
+you create your own desktop widgets similarly to how you can in AwesomeWM.
 
-**Strength of Ewwii over Eww:**
+**Main Features of Ewwii:**
 
-- Full-fledged scripting & expressions
-- User-defined widget trees & composition
-- Built-in configuration libraries
-- Builtin tooling for better developer experience
-- Full control over reactive updates (user defines if widget should update dynamically)
+- Scripting & Expressions
+- Extensibility
+- Builtin Tooling
+- Gtk4 Backend
 
-Ewwii is configured in [Rhai](https://rhai.rs/)
+Ewwii is configured in [Nbcl](https://nbcl-lang.github.io/)
 and themed using [CSS](https://en.wikipedia.org/wiki/CSS)
-or [SCSS](<https://en.wikipedia.org/wiki/Sass_(style_sheet_language)>),
-it is easy to customize and is powerful and dynamic.
+or [SCSS](<https://en.wikipedia.org/wiki/Sass_(style_sheet_language)>).
 The main goal of Ewwii is to make configuration easy
-and to give the user all the power that they need.
+and to give the user all the power and extensibility that they need.
 
-Rhai is not just a basic markup language. It is a full embeddable scripting language!
-This makes ewwii's configuration even more flexible and powerful.
-
-Whether you're building a tiling-friendly status bar, a floating dashboard, or a themed control panel, Ewwii gives you the tools to design it, script it, and make it your own.
+:::tip
+Coming from eww? Check [yucky-ewwii](resources#plugins) out to use yuck as the configuration language while benefiting from all the features of ewwii!
+:::

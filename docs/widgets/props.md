@@ -1,8 +1,8 @@
 # Widget Properties
 
-## widget
+## All
 
-These properties apply to all widgets, and can be used anywhere!
+These properties apply to all widgets, and can be used on every widget!
 
 **Properties**
 
@@ -23,7 +23,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `focusable`: `bool` make widget focusable
 - `widget_name`: `strong` custom widget name
 
-## combo_box_text
+## ComboBoxText
 
 **Properties**
 
@@ -31,14 +31,14 @@ These properties apply to all widgets, and can be used anywhere!
 - `timeout`: `duration` timeout of the command. Default: "200ms"
 - `onchange`: `string` runs when an item is selected, replacing `{}` with the item
 
-## expander
+## Expander
 
 **Properties**
 
 - `name`: `string` name of the expander
 - `expanded`: `bool` sets whether it's expanded
 
-## revealer
+## Revealer
 
 **Properties**
 
@@ -46,7 +46,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `reveal`: `bool` whether the child is revealed
 - `duration`: `duration` how long the transition lasts. Default: "500ms"
 
-## checkbox
+## Checkbox
 
 **Properties**
 
@@ -55,7 +55,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onchecked`: `string` command when checked
 - `onunchecked`: `string` command when unchecked
 
-## color_button
+## ColorButton
 
 **Properties**
 
@@ -63,7 +63,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onchange`: `string` command on color select
 - `timeout`: `duration` Default: "200ms"
 
-## color_chooser
+## ColorChooser
 
 **Properties**
 
@@ -71,7 +71,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onchange`: `string` command on color select
 - `timeout`: `duration` Default: "200ms"
 
-## scale
+## Scale
 
 **Properties**
 
@@ -87,7 +87,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onchange`: `string` command on change (use `{}` for value)
 - `orientation`: `string` layout direction
 
-## progress
+## Progress
 
 **Properties**
 
@@ -97,7 +97,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `value`: `float` progress (0–100)
 - `orientation`: `string` layout direction
 
-## circular_progress
+## CircularProgress
 
 **Properties**
 
@@ -108,7 +108,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `fg_color`: `string` foreground color of circle
 - `bg_color`: `string` background color of circle
 
-## input
+## Input
 
 **Properties**
 
@@ -119,7 +119,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onaccept`: `string` command on Enter (use `{}` for value)
 - `password`: `bool` obscure input
 
-## button
+## Button
 
 **Properties**
 
@@ -129,7 +129,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `onmiddleclick`: `string` command on middle click
 - `onrightclick`: `string` command on right click
 
-## image
+## Image
 
 **Properties**
 
@@ -141,7 +141,7 @@ These properties apply to all widgets, and can be used anywhere!
 - `preserve_aspect_ratio`: `bool` keep aspect ratio
 - `fill_svg`: `string` fill color for SVGs
 
-## box
+## Box
 
 **Properties**
 
@@ -149,19 +149,19 @@ These properties apply to all widgets, and can be used anywhere!
 - `orientation`: `string` direction of children
 - `space_evenly`: `bool` distribute children evenly
 
-## overlay
+## Overlay
 
 **Properties**
 
 _None_
 
-## tooltip
+## Tooltip
 
 **Properties**
 
 _None listed_
 
-## scroll
+## Scroll
 
 **Properties**
 
@@ -169,7 +169,7 @@ _None listed_
 - `vscroll`: `bool` allow vertical scrolling
 - `propagate_natural_height`: `bool` use the natural height if true
 
-## eventbox
+## EventBox
 
 **Properties**
 
@@ -190,7 +190,7 @@ _None listed_
 - `onkeypress`: `string` command on any key press (`{}` becomes the id of the key pressed)
 - `onkeyrelease`: `string` command on any key release (`{}` becomes the id of the key released)
 
-## label
+## Label
 
 **Properties**
 
@@ -209,7 +209,7 @@ _None listed_
 - `wrap_mode`: `string` wrap mode ("word", "char", etc.)
 - `lines`: `int` max lines (−1 = unlimited)
 
-## calendar
+## Calendar
 
 **Properties**
 
@@ -222,7 +222,7 @@ _None listed_
 - `onclick`: `string` command with `{0}`, `{1}`, `{2}` for day/month/year
 - `timeout`: `duration` Default: "200ms"
 
-## stack
+## Stack
 
 **Properties**
 
@@ -230,7 +230,7 @@ _None listed_
 - `transition`: `string` animation name
 - `transition_duration`: `int` duration in millisecond as number
 
-## flowbox
+## FlowBox
 
 **Properties**
 
@@ -239,7 +239,7 @@ _None listed_
 - `onaccept`: `string` command on Enter (use `{}` for selected widget's name)
 - `selection_model`: `string` selection model
 
-## graph
+## Graph
 
 **Properties**
 

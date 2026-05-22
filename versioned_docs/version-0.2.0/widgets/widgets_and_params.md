@@ -48,4 +48,4 @@ These are not visible UI widgets but are essential for layout, data binding, or 
 
 - `children` param: Defined in `[]`
 
-> Both of these are discussed in [chapter 2.2](/docs/config_and_syntax/config_fundamentals.md)
+> Both of these are discussed in [chapter 2.2](/docs/config_and_syntax/config_fundamentals)

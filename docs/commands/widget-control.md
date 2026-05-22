@@ -36,10 +36,10 @@ ewwii widget-control remove popup1 popup2
 ### `create`
 
 Create widgets dynamically under a given parent widget.
-Widget definitions are passed as inline Rhai snippets.
+Widget definitions are passed as inline Nbcl snippets.
 
 ```bash
-ewwii widget-control create --parent <PARENT_NAME> <RHAI_CODES>...
+ewwii widget-control create --parent <PARENT_NAME> <NBCL_CODES>...
 ```
 
 **Example**

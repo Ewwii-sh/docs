@@ -28,3 +28,36 @@
   --ifm-color-primary-lightest: #ffc293;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+[data-theme="dark"] pre {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
+[data-theme="dark"] pre span {
+  color: var(--shiki-dark) !important;
+}
+
+/* Diff */
+.shiki .diff.remove {
+  background-color: #ff000033;
+  display: inline-block;
+  width: 100%;
+}
+
+.shiki .diff.add {
+  background-color: #00ff0033;
+  display: inline-block;
+  width: 100%;
+}
+
+.shiki .diff.remove::before {
+  content: "-";
+  color: #f44336;
+  margin-right: 0.5rem;
+}
+
+.shiki .diff.add::before {
+  content: "+";
+  color: #4caf50;
+  margin-right: 0.5rem;
+}
