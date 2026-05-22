@@ -66,7 +66,7 @@ Examples include:
 - `formattime()` – format UNIX timestamps
 - `formatbytes()` – format file sizes (IEC or SI)
 
-To learn about all the built-in functions, check out [Rhai Global Modules](../modules/global).
+To learn about all the built-in functions, check out Rhai Global Modules.
 
 ## Dynamic Usage
 
