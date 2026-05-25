@@ -76,6 +76,13 @@ const config: Config = {
     [
       "classic",
       {
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
         docs: {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "/",
