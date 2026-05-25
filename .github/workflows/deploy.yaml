@@ -22,17 +22,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Cache Rust deps
-        uses: Swatinem/rust-cache@v2
-        with:
-          prefix-key: "v0-rust"
-          shared-key: "rust-deps"
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-          env-vars: "CARGO CC CFLAGS CXX CMAKE RUST"
-          cache-targets: true
-          workspaces: |
-            ewwii -> target
-
       - name: Cache Node deps
         uses: actions/setup-node@v3
         with:
