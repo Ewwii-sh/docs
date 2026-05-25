@@ -13,11 +13,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
       - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        run: curl -fsSL https://get.pnpm.io/install.sh | sh -
 
       - name: Cache Node deps
         uses: actions/setup-node@v3
