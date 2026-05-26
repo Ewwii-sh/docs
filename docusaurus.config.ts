@@ -92,6 +92,7 @@ const config: Config = {
             ] satisfies MDXPlugin,
           ],
         },
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -163,7 +164,6 @@ const config: Config = {
         hashed: true,
         language: ["en"],
         indexDocs: true,
-        indexBlog: true,
         docsRouteBasePath: "/",
       },
     ],
