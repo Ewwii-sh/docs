@@ -21,7 +21,7 @@ These properties apply to all widgets, and can be used on every widget!
 - `css`: `string` scss code applied to the widget
 - `can_target`: `bool` make the widget targettable to pointer events.
 - `focusable`: `bool` make widget focusable
-- `widget_name`: `strong` custom widget name
+- `widget_name`: `string` custom widget name
 
 ## ComboBoxText
 
