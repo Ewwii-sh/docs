@@ -153,7 +153,6 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Ewwii, All rights served.`,
     },
   } satisfies Preset.ThemeConfig,
 

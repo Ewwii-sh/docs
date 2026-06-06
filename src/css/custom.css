@@ -37,6 +37,34 @@
   color: var(--shiki-dark) !important;
 }
 
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #444950 !important;
+}
+
+.footer .footer__link-item {
+  color: #4d5764 !important;
+}
+
+.footer .footer__title {
+  color: #4d5764 !important;
+}
+
+
+[data-theme="dark"] .footer {
+  background-color: #1b1b1d !important;
+}
+
+[data-theme="dark"] {
+    .footer .footer__link-item {
+      color: #ffffff !important;
+    }
+
+    .footer .footer__title {
+      color: #ffffff !important;
+    }
+}
+
 /* Diff */
 .shiki .diff.remove {
   background-color: #ff000033;
