@@ -6,6 +6,15 @@ sidebar_position: 1.2
 
 Extensibility is one of the core focus of ewwii. So we aim to provide resources that will help you make your configuration easier.
 
+## Tools
+
+### eiipm
+
+`eiipm` is an official plugin manager for handling ewwii plugins with ease. It automates downloading, compiling, and maintaining plugins in an ewwii configuration.
+
+- Documentation: https://ewwii-sh.github.io/eiipm
+- Repository: https://github.com/ewwii-sh/eiipm
+
 ## Plugins
 
 Ewwii can be extended with plugins. It is part of our efforts to make ewwii extensible. This section will showcase all the **official** ewwii plugins.
@@ -20,3 +29,4 @@ Use third-party plugins at your own risk. Only use the plugins that you trust.
 
 - Documentation: https://ewwii-sh.github.io/yucky-ewwii/
 - Repository: https://github.com/ewwii-sh/yucky-ewwii/
+
