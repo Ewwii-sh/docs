@@ -19,6 +19,8 @@ Extensibility is one of the core focus of ewwii. So we aim to provide resources 
 
 Ewwii can be extended with plugins. It is part of our efforts to make ewwii extensible. This section will showcase all the **official** ewwii plugins.
 
+See [plugins page](https://ewwii-sh.github.io/plugins) to view all the community and official plugins.
+
 :::danger
 Use third-party plugins at your own risk. Only use the plugins that you trust.
 :::
