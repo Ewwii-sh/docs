@@ -1,6 +1,6 @@
 # `ewwii call-fns`
 
-The `call-fns` command allows you to call **Nbcl functions** directly through the terminal. This can be useful for triggering specific functionality in your widget configuration without updating or interacting with the GUI.
+The `call-fns` command allows you to call **Nbcl functions** directly from the terminal. 
 
 **Example:**
 
