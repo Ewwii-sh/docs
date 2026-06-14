@@ -197,6 +197,7 @@ _None listed_
 - `limit_width`: `int` max characters to show
 - `truncate_left`: `bool` truncate beginning
 - `unindent`: `bool` strip leading spaces
+- `unescape`: `bool` parses escape sequences
 - `markup`: `string` Pango markup
 - `wrap`: `bool` wrap text
 - `gravity`: `string` text gravity
