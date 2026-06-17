@@ -24,5 +24,5 @@ The main goal of Ewwii is to make configuration easy
 and to give the user all the power and extensibility that they need.
 
 :::tip
-Coming from eww? Check [yucky-ewwii](resources#plugins) out to use yuck as the configuration language while benefiting from all the features of ewwii!
+Coming from eww? Check [yucky-ewwii](https://ewwii-sh.github.io/plugins/yucky-ewwii/) out to use yuck as the configuration language while benefiting from all the features of ewwii!
 :::
