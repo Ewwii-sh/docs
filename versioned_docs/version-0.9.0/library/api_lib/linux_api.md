@@ -106,6 +106,6 @@ let device = disk.device
 # all are in kilobytes (int)
 let total = disk.total_kb
 let used  = disk.used_kb
-let free  = disk.fre_kb
+let free  = disk.free_kb
 ```
 
