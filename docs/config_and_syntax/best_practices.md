@@ -4,6 +4,8 @@ sidebar_position: 2.3
 
 # Best Practices
 
+Before you continue, just keep these practices in mind as they showcase really useful patterns.
+
 ## Using Components
 
 As your configuration grows, you might want to improve its structure by factoring out pieces into reusable components.
