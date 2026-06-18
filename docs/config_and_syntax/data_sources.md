@@ -162,10 +162,6 @@ Label {
 
 Set's a property of the widget found.
 
-:::important
-The `set_property` follows the GTK4 property naming system instead of ewwii's property naming system provided in [Widget Properties Section](../widgets/props).
-:::
-
 #### `add_class` & `remove_class` function
 
 Adds/Removes a class from the widget found.
