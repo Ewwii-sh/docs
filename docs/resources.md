@@ -50,6 +50,13 @@ Official ewwii tools and plugins that deserve a mention.
 - Documentation: https://ewwii-sh.github.io/eiipm
 - Repository: https://github.com/ewwii-sh/eiipm
 
+### jscore (language)
+
+`jscore` is an official ewwii plugin that adds JavaScript language support to ewwii. It supports npm packages and and is blazingly fast.
+
+- Documentation: https://ewwii-sh.github.io/jscore.ewwii/
+- Repository: https://github.com/ewwii-sh/jscore.ewwii/
+
 ### yucky-ewwii (language)
 
 `yucky-ewwii` is an ewwii plugin that brings the `yuck` configuration language support to ewwii. It wont be 1:1 compatible with eww configurations as it is made to follow the standards of ewwii. However, the cost of migration (from eww) is very minimal when using this plugin as there are only a very few things that wont port nicely.
