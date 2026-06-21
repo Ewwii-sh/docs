@@ -1,5 +1,17 @@
 # Styling Widgets
 
+## Getting Started
+
+When creating your ewwii config, always make sure to add this at the top of your (s)css file:
+
+```css
+* {
+    all: unset,
+}
+```
+
+It gets rid of the Gtk theming and allows you to style your own widgets.
+
 ## In-Line
 
 Ewwii allows writing inline styles to widgets using the `style` property. These styles are then applied at runtime using GTK's CSS system.
