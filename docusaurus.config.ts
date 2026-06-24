@@ -87,6 +87,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "/",
           editUrl: "https://github.com/Ewwii-sh/docs/edit/main",
+          showLastUpdateTime: true,
           beforeDefaultRehypePlugins: [
             [
               rehypeShiki, shikiOptions
