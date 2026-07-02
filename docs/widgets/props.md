@@ -11,7 +11,6 @@ These properties apply to all widgets, and can be used on every widget!
 - `halign`: `string` how to align this horizontally. possible values: "fill", "baseline", "center", "start", "end"
 - `vexpand`: `bool` should this container expand vertically. Default: false
 - `hexpand`: `bool` should this widget expand horizontally. Default: false
-- `eval_ignore`: `bool` skip the automatic re-evaluation of this widget.
 - `width`: `int` width of this element
 - `height`: `int` height of this element
 - `active`: `bool` If this widget can be interacted with
