@@ -127,6 +127,9 @@ These properties apply to all widgets, and can be used on every widget!
 - `onclick`: `string` command on activation
 - `onmiddleclick`: `string` command on middle click
 - `onrightclick`: `string` command on right click
+- `onrelease`: `string` command on release
+- `onmiddlerelease`: `string` command on middle release
+- `onrightrelease`: `string` command on right release
 
 ## Image
 
@@ -184,6 +187,9 @@ _None listed_
 - `onclick`: `string` command on click
 - `onmiddleclick`: `string` command on middle click
 - `onrightclick`: `string` command on right click
+- `onrelease`: `string` command on release
+- `onmiddlerelease`: `string` command on middle release
+- `onrightrelease`: `string` command on right release
 - `onkeypress`: `string` command on any key press (`{}` becomes the id of the key pressed)
 - `onkeyrelease`: `string` command on any key release (`{}` becomes the id of the key released)
 

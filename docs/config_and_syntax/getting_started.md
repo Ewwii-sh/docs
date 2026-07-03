@@ -53,6 +53,7 @@ You can now open your first window by running `ewwii open example`! Glorious!
 | ---------: | ------------------------------------------------------------------------ |
 |  `monitor` | Which monitor this window should be displayed on. See below for details. |
 | `geometry` | Geometry of the window.                                                  |
+| `waited_close` | Close after `x` duration. |
 
 **`monitor` properties**
 
@@ -72,6 +73,8 @@ Depending on if you are using X11 or Wayland, some additional properties exist:
 
 #### X11
 
+> Properties that work only on x11.
+
 |     Property | Description                                                                                                                                                                                                                                                    |
 | -----------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |   `stacking` | Where the window should appear in the stack. Possible values: `fg`, `bg`.                                                                                                                                                                                      |
@@ -80,6 +83,8 @@ Depending on if you are using X11 or Wayland, some additional properties exist:
 | `windowtype` | Specify what type of window this is. This will be used by your window manager to determine how it should handle your window. Possible values: `normal`, `dock`, `toolbar`, `dialog`, `desktop`. Default: `dock` if `reserve` is specified, `normal` otherwise. |
 
 #### Wayland
+
+> Properties that work only on wayland.
 
 |       Property | Description                                                                                                                                                              |
 | -------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
