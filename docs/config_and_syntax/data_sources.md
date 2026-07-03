@@ -14,7 +14,7 @@ In Nbcl, all variables are dynamically typed bindings to values. You can define 
 
 **Basic variables (`let` and `const`)**
 
-```js
+```nbcl
 let foo = "value"
 const bar = "value"
 ```
@@ -28,7 +28,7 @@ Just having nbcl variables that wont update is pretty limiting. So, ewwii has tw
 
 **Polling Signal (`Poll`)**
 
-```js
+```nbcl
 Poll "var_name" {
   initial = "initial value"
   interval = "2s"
@@ -53,7 +53,7 @@ When a graph widget is driven by a polling signal, set `skip_unchanged` to false
 
 **Listening Signal (`Listen`)**
 
-```js
+```nbcl
 Listen "foo" {
   initial = "whatever"
   cmd = "tail -F /tmp/some_file"
@@ -165,3 +165,14 @@ Set's a property of the widget found.
 #### `add_class` & `remove_class` function
 
 Adds/Removes a class from the widget found.
+
+## Common Misconceptions
+
+There is a common misconception that ewwii config is revaluated every time a dynamic global signal updates.
+Ewwii configs are only evaluated **once** and a tree is generated out of it. Ewwii then works purely on 
+this tree with no context to anything happening in the config.
+
+So if someone were to try to dynamically inject an widget into the config, it won't work without a reload 
+because of the said reason. Same is true for trying to update global signals.
+
+If you want the post render dyanmic reactivity, see [advanced](./advanced) and [advanced commands](../commands/).

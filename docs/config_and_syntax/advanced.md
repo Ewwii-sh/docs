@@ -9,16 +9,18 @@ Do note that most of these features and patterns are **very simple**. don't let 
 
 ## Calling Nbcl Functions
 
-You can call nbcl functions directly from an ewwii command like so: `ewwii call-fns "function(args)"` as stated in [advanced commands](../commands/call_fns).
+You can run nbcl expressions directly from your terminal using the `nbcl-run` command as stated in [Nbcl Run Advanced Command](../commands/nbcl_run).
 
 They can be used in ewwii like this:
 
 ```nbcl
 Button "my-btn" {
     label = "Hello, Bob!"
-    onclick = "ewwii call-fns 'change_label()'"
+    onclick = "ewwii nbcl-run 'change_label()'"
 }
 ```
+
+Make sure you have that function defined in `ewwii.nbcl`:
 
 ```nbcl
 # ewwii.nbcl
