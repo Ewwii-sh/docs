@@ -75,34 +75,56 @@ Another example usecase is monitoring the currently playing song with playerctl:
 
 **Using these signals**
 
-Since these are global signals, they can be used everywhere in the configuration using the `global` function. Their values can also be mutated temporarily for if you pair it with the `template` function.
-
+Since these are global signals, they can be used everywhere in the configuration using the `global` function. 
 ```nbcl
 Poll "time" {
-  initial = "initial value"
-  interval = "2s"
-  cmd = "date +%H:%M:%S"
+    initial = "initial value"
+    interval = "2s"
+    cmd = "date +%H:%M:%S"
 }
 
 Window "1" {
-  CustomWidget {}
+    CustomWidget {}
 }
 
 component CustomWidget (any: props) {
-  Box {
-    Label {
-      # Just use the value directly
-      text = global("time")
+    Box {
+        Label {
+            # Using the value directly
+            text = global("time")
+        }
     }
-    Label {
-      # {self} is how you access the value of a global variable.
-      text = global("time").template("Time: {time}")
-    }
-  }
 }
 ```
 
-You can do arithmetic and if/else inside `template` too. Like so:
+Values of globals can also be mutated temporarily for if you pair it with the `mutate` function. It takes a 
+closure as a parameter, and inside it, you can work with the current value of the globals and return 
+a new value that is set as the widget's property.
+
+```nbcl 
+Label {
+    text = global("time").mutate(|val| {
+        # val is the current value of "time"
+
+        # make sure to return a value to set
+        return "new_val"
+    })
+}
+```
+
+Another thing that is similar to `mutate`, but simpler, is the `template` function. 
+You can set a template on how value should be set.
+
+```nbcl
+Label {
+    text = global("time").template("Time: {time}")
+
+    # You can refer to other globals too:
+    # text = global("time").template("Time: {time} {other_time}")
+}
+```
+
+You can do arithmetic and if/else inside `template` too:
 
 ```nbcl
 # arithmetic
