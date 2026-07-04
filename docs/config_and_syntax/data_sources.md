@@ -26,7 +26,7 @@ This is the simplest type of variable. These variables exist only during evaluat
 
 Just having nbcl variables that wont update is pretty limiting. So, ewwii has two built in components to register dynamic signals that can change according to the command. These variables are global, which means that it is available in all modules.
 
-**Polling Signal (`Poll`)**
+### Polling Signal (`Poll`)
 
 ```nbcl
 Poll "var_name" {
@@ -51,7 +51,7 @@ To externally update a polling signal, `ewwii update` can be used like with bas
 When a graph widget is driven by a polling signal, set `skip_unchanged` to false to ensure continuous updates.
 :::
 
-**Listening Signal (`Listen`)**
+### Listening Signal (`Listen`)
 
 ```nbcl
 Listen "foo" {
@@ -73,7 +73,7 @@ These are particularly efficient and should be preferred if possible.
 For example, the command `xprop -spy -root _NET_CURRENT_DESKTOP` writes the currently focused desktop whenever it changes.
 Another example usecase is monitoring the currently playing song with playerctl: `playerctl --follow metadata --format {{title}}`.
 
-**Using these signals**
+### Using these signals
 
 Since these are global signals, they can be used everywhere in the configuration using the `global` function. 
 ```nbcl
