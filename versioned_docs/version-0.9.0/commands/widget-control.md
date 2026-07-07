@@ -48,15 +48,15 @@ ewwii widget-control create --parent <PARENT_NAME> <NBCL_CODES>...
 # Create a button inside the widget named "awesome_box"
 ewwii widget-control create \
     --parent awesome_box \
-    'Button "btn1"  { label: "Click Me" }'
+    'Button "btn1"  { label = "Click Me" }'
 ```
 
 Multiple definitions can be passed in one call:
 
 ```bash
 ewwii widget-control create --parent awesome_box \
-    'Label { text: "CPU" }' \
-    'Button "btn1" { label: "Click Me" }'
+    'Label { text = "CPU" }' \
+    'Button "btn1" { label = "Click Me" }'
 ```
 
 ### `property-update`
@@ -123,3 +123,5 @@ ewwii widget-control remove-class --widget <WIDGET_NAME> <CLASS>
 ```bash
 ewwii widget-control remove-class --widget notif highlight
 ```
+
+
