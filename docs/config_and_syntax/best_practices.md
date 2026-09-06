@@ -16,15 +16,15 @@ Here's an example of a custom container that adds a label before its children:
 
 ```nbcl
 component LabeledContainer () {
-  Box {
-    class = "container"
+    Box {
+        class = "container"
 
-    Label {
-      text = self.id
+        Label {
+            text = self.id
+        }
+
+        self.children
     }
-
-    self.children
-  }
 }
 ```
 
@@ -32,10 +32,10 @@ You can call it like this:
 
 ```nbcl
 LabeledContainer "foo" {
-  Button {
-    onclick = "notify-send hey ho"
-    label = "Click me"
-  }
+    Button {
+        onclick = "notify-send hey ho"
+        label = "Click me"
+    }
 }
 ```
 
@@ -58,16 +58,16 @@ ewwii open my_bar --screen 1 --id secondary
 If you want to display a list of values, you can use the `for`-Element to fill a container with a list of elements generated from a JSON-array.
 
 ```nbcl
-let my_array = [1, 2, 3];
+let my_array = [1, 2, 3]
 
 # Inside your widget, you can do  this
 Box {
-  for entry in my_array {
-    Button {
-      onclick = "notify-send 'click' 'button ${entry}'",
-      label = entry.to_string()
+    for entry in my_array {
+        Button {
+            onclick = f"notify-send 'click' 'button ${entry}'",
+            label = entry.to_string()
+        }
     }
-  }
 }
 ```
 
@@ -91,9 +91,9 @@ fn greet() { return "Greetings!" }
 let PI = 3.14159
 
 # in ./ewwii.nbcl
-import "foo/baz.nbcl" as example;
-print(example.greet()); # Greetings!
-print(example.PI);      # 3.14159
+import "foo/baz.nbcl" as example
+print(example.greet()) # Greetings!
+print(example.PI)      # 3.14159
 ```
 
 A nbcl file may import the contents of any other rhai file that they export. For this, make use of the `import` directive. However, a slight limitation is that `import "eg.nbcl" as example` only imports functions and variables under the `example` namespace. To import a **component**, you would have to use this syntax:
