@@ -120,13 +120,14 @@ const config: Config = {
                 },
                 {
                     href: "https://ewwii-sh.github.io",
-                        label: "Home",
+                    label: "Home",
                     target: '_self',
+                    className: "no-external-icon",
                     position: "right",
                 },
                 {
                     href: "https://github.com/Ewwii-sh",
-                        label: "GitHub",
+                    label: "GitHub",
                     position: "right",
                 },
             ],

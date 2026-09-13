@@ -89,3 +89,7 @@
   color: #4caf50;
   margin-right: 0.5rem;
 }
+
+.no-external-icon svg {
+  display: none;
+}
