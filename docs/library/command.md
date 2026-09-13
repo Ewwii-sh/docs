@@ -27,5 +27,6 @@ Run a command and read the output.
 
 ```nbcl
 import ewwii.command
-command.run_and_read("echo Hello")
+let stdout = command.run_and_read("echo Hello")
+print(stdout)
 ```
