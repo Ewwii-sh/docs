@@ -18,7 +18,7 @@ Here you will find help if something doesn't work. If the issue isn't listed her
 
 ## My configuration is not loaded correctly
 
-1. Make sure the `ewwii.rhai` and `ewwii.(s)css` files are in the correct places.
+1. Make sure the `ewwii.nbcl` and `ewwii.(s)css` files are in the correct places.
 2. Sometimes, ewwii might fail to load your configuration as a result of a configuration error. Make sure your configuration is valid.
 
 ## Something isn't styled correctly!

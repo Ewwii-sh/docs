@@ -1,7 +1,7 @@
 # Regex
 
 ```nbcl
-import core.regex
+import ewwii.regex
 ```
 
 ## `is_match`
@@ -18,7 +18,7 @@ Check if the regex match.
 **Example:**
 
 ```nbcl
-import core.regex
+import ewwii.regex
 
 let text = "hello world"
 let pattern = "hello"
@@ -40,7 +40,7 @@ Find something in the given text using regex.
 **Example:**
 
 ```nbcl
-import core.regex
+import ewwii.regex
 
 let text = "id: 12345"
 let pattern = "\\d+"
@@ -63,7 +63,7 @@ Find all instances of something in a text using regex.
 **Example:**
 
 ```nbcl
-import core.regex
+import ewwii.regex
 
 let text = "apples, bananas, and cherries"
 let pattern = "\\w+"
@@ -86,7 +86,7 @@ Replace things in a text using regex.
 **Example:**
 
 ```nbcl
-import core.regex
+import ewwii.regex
 
 let text = "I love cats"
 let pattern = "cats"

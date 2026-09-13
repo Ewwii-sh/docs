@@ -4,18 +4,17 @@ slug: /
 sidebar_position: 1
 ---
 
-# Ewwii - Building Widgets Made Better!
+# Overview
 
-Ewwii is a rewrite of [Eww](https://github.com/elkowar/eww), and is a
-widget system written in [Rust](https://www.rust-lang.org/), which lets 
-you create your own desktop widgets similarly to how you can in AwesomeWM.
+Welcome to ewwii, a rewrite of [eww](https://github.com/elkowar/ewwii) which aims to make building widgets 
+with flexibility and power without compromising performance or being heavy on RAM.
 
 **Main Features of Ewwii:**
 
-- Scripting & Expressions
-- Extensibility
-- Builtin Tooling
-- Gtk4 Backend
+- **Extensibility**: Extend ewwii with plugins.
+- **Hot reloading**: See your changes happen immediately.
+- **GPU acceleration**: Highly performant widgets.
+- **Lightweight**: Extremely small binary and fast runtime.
 
 Ewwii is configured in [Nbcl](https://nbcl-lang.github.io/)
 and themed using [CSS](https://en.wikipedia.org/wiki/CSS)
@@ -25,8 +24,4 @@ and to give the user all the power and extensibility that they need.
 
 :::tip
 Coming from eww? Check [yucky-ewwii](https://ewwii-sh.github.io/plugins/yucky-ewwii/) out to use yuck as the configuration language while benefiting from all the features of ewwii!
-:::
-
-:::tip 
-Need maximum power? Check [jscore](https://ewwii-sh.github.io/plugins/jscore/) out!
 :::

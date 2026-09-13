@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2.6
+sidebar_position: 2.7
 ---
 
 # Advanced
@@ -54,9 +54,9 @@ Button "my-btn" {
 
 ## Using Unsupported Widgets
 
-Ewwii has a [special widget](../widgets/special) called GtkUI that lets you load a widget from a Gtk XML file. 
-Though these widgets cant be updated during runtime, they are a viable option if you want to register a set of static
-widgets that wont update values.
+Not all Gtk widgets are suppoted by ewwii. But there is a way to counter this (thought the solution may not be ideal in some scenario).
+Ewwii has a [special widget](../widgets/special) called GtkUI that lets you load a widget from a Gtk XML file. Though these widgets 
+cant be updated during runtime, they are a viable option if you want to register a set of static widgets that wont update values.
 
 ```nbcl
 # Loads a widget with the id 'my-btn'

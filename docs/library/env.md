@@ -1,7 +1,7 @@
 # Env
 
 ```nbcl
-import core.env
+import ewwii.env
 ```
 
 ## `set_env`
@@ -18,7 +18,7 @@ Set the value of an environmental variable.
 **Example:**
 
 ```nbcl
-import core.env
+import ewwii.env
 env.set_env("FOO", "bar")
 ```
 
@@ -35,7 +35,7 @@ Get the value of an environmental variable.
 **Example:**
 
 ```nbcl
-import core.env
+import ewwii.env
 print(env.get_env("FOO"))
 ```
 
@@ -48,7 +48,7 @@ Get the home directory.
 **Example:**
 
 ```nbcl
-import core.env
+import ewwii.env
 print(env.get_homedir())
 ```
 
@@ -61,7 +61,7 @@ Get the current directory.
 **Example:**
 
 ```nbcl
-import core.env
+import ewwii.env
 print(env.get_current_dir())
 ```
 
@@ -74,6 +74,6 @@ Get the username of the user.
 **Example:**
 
 ```nbcl
-import core.env
+import ewwii.env
 print(env.get_username())
 ```

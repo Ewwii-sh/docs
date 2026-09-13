@@ -30,9 +30,9 @@ Just having nbcl variables that wont update is pretty limiting. So, ewwii has tw
 
 ```nbcl
 Poll "var_name" {
-  initial = "initial value"
-  interval = "2s"
-  cmd = "date +%H:%M:%S"
+    initial = "initial value"
+    interval = "2s"
+    cmd = "date +%H:%M:%S"
 }
 ```
 
@@ -55,8 +55,8 @@ When a graph widget is driven by a polling signal, set `skip_unchanged` to false
 
 ```nbcl
 Listen "foo" {
-  initial = "whatever"
-  cmd = "tail -F /tmp/some_file"
+    initial = "whatever"
+    cmd = "tail -F /tmp/some_file"
 }
 ```
 

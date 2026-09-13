@@ -1,7 +1,7 @@
 # Json
 
 ```nbcl
-import core.json
+import ewwii.json
 ```
 
 ## `parse`
@@ -17,7 +17,7 @@ Parse a json string into a map.
 **Example:**
 
 ```nbcl 
-import core.json 
+import ewwii.json 
 
 let str_json = '{ "key": "value" }'
 print(json.parse(str_json))
@@ -36,7 +36,7 @@ Get a json string from a map.
 **Example:**
 
 ```nbcl
-import core.json
+import ewwii.json
 
 let map = { key = "value" }
 print(json.stringify(map))

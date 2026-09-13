@@ -4,13 +4,15 @@ sidebar_position: 2.3
 
 # Best Practices
 
-Before you continue, just keep these practices in mind as they showcase really useful patterns.
+Now that you have a basic understanding of ewwii, lets learn a few good practicies before continuing. They will definitely help
+you some way or the other later on.
 
 ## Using Components
 
 As your configuration grows, you might want to improve its structure by factoring out pieces into reusable components.
 
-In Ewwii's Nbcl-based configuration system, you can define wrapper functions that return widgets and accept a `children` parameter (or any parameter that you prefer), just like built-in widgets such as `box()` or `button()`.
+In Ewwii's Nbcl configuration system, you can define new widgets using existing widgets. These new widgets are *components*. You
+can pass parameters and children to it for getting different sorts of results.
 
 Here's an example of a custom container that adds a label before its children:
 
@@ -101,15 +103,15 @@ A nbcl file may import the contents of any other rhai file that they export. For
 ```nbcl
 # in ./example.nbcl
 component ExampleCmp () {
-  # implementation omitted ... 
+    # implementation omitted ... 
 }
 
 # in ./main.nbcl
 import "example.nbcl" as example { ExampleCmp }
 ExampleCmp {
-  # All the functions and variables are
-  # imported under the `example` variable,
-  # and components are imported directly as-is.
+    # All the functions and variables are
+    # imported under the `example` variable,
+    # and components are imported directly as-is.
 }
 ```
 
