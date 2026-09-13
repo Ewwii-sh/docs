@@ -5,7 +5,7 @@ sidebar_position: 2.1
 # Getting Started
 
 :::tip
-For a list of all built-in widgets (i.e. `Box`, `Label`, `Button`), see [Widget Documentation](/docs/widgets/widgets.md).
+For a list of all built-in widgets (i.e. `Box`, `Label`, `Button`), see [Widget Documentation](../widgets/widgets.md).
 :::
 
 To get started, you'll need to create two files: `ewwii.nbcl` and `ewwii.scss` (or `ewwii.css`, if you prefer that). These files must be placed under `$XDG_CONFIG_HOME/ewwii` (which is most likely `~/.config/ewwii`).

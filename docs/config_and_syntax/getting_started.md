@@ -5,7 +5,7 @@ sidebar_position: 2.1
 # Getting Started
 
 :::tip
-For a list of all built-in widgets (i.e. `Box`, `Label`, `Button`), see [Widget Documentation](/docs/widgets/widgets.md).
+For a list of all built-in widgets (i.e. `Box`, `Label`, `Button`), see [Widget Documentation](../widgets_and_window/props.md).
 :::
 
 To get started, you'll need to create two files: `ewwii.nbcl` and `ewwii.scss` (or `ewwii.css`, if you prefer that). These files must be placed under `$XDG_CONFIG_HOME/ewwii` (which is most likely `~/.config/ewwii`).
@@ -93,4 +93,4 @@ We are creating a component named `Greeter` which takes one property, called `na
 
 Now inside the component, we declare the body of our widget that we are returning. We make use of a `Box`, which we set a couple properties of. This box then contains a button. In that button's `onclick` property, we refer to the provided `name` using string-interpolation syntax: `"${name}"`.
 
-As you may have noticed, we are using a couple predefined widgets here. These are all listed and explained in the [Widgets & Windows Section](../widgets_and_window/).
+As you may have noticed, we are using a couple predefined widgets here. These are all listed and explained in the [Widgets & Windows Section](../widgets_and_window/props.md).

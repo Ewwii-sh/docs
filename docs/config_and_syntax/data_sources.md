@@ -197,4 +197,4 @@ this tree with no context to anything happening in the config.
 So if someone were to try to dynamically inject an widget into the config, it won't work without a reload 
 because of the said reason. Same is true for trying to update global signals.
 
-If you want the post render dyanmic reactivity, see [advanced](./advanced) and [advanced commands](../commands/).
+If you want the post render dyanmic reactivity, see [advanced](./advanced) and [advanced commands](../commands/nbcl_run.md).
