@@ -119,7 +119,7 @@ ExampleCmp {
 
 If you want to separate different widgets even further, you can create a new ewwii config folder anywhere else.
 Then, you can tell ewwii to use that configuration directory by passing _every_ command the `--config /path/to/your/config/dir` flag.
-Make sure to actually include this in all your `ewwii` calls, including `ewwii kill`, `eww logs`, etc.
+Make sure to actually include this in all your `ewwii` calls, including `ewwii kill`, `ewwii logs`, etc.
 This launches a separate instance of the ewwii daemon that has separate logs and state from your main ewwii configuration.
 
 ```bash
